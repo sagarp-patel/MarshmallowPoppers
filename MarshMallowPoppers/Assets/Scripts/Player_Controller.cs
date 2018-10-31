@@ -42,7 +42,7 @@ public class Player_Controller : MonoBehaviour {
             transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
 
-        if (Input.GetKey(jump) && isGrounded == true)
+        if (Input.GetKeyDown(jump) && isGrounded == true)
         {
             Debug.Log("SpaceBar is pressed", gameObject);
             Jump();
@@ -55,12 +55,14 @@ public class Player_Controller : MonoBehaviour {
 
     void Jump() {
         Debug.Log("Jump button is pressed", gameObject);
-        isGrounded = false;
+        //isGrounded = false;
         rigidBody.AddForce(Vector2.up * 250.0f);
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Collision has Happened", gameObject);
+        Debug.Log(collision.gameObject.tag,gameObject);
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
