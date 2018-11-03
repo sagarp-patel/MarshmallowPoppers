@@ -10,17 +10,17 @@ public class EnemyAI : MonoBehaviour
     public float retreatDistance;
 
     private Transform player;
-    public GameObject projectile;
+    //public GameObject projectile;
 
-    private float timeBShots;
-    public float startTimeBShots;
+    //private float timeBShots;
+    //public float startTimeBShots;
 
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        timeBShots = startTimeBShots;
+        //timeBShots = startTimeBShots;
     }
 
     // Update is called once per frame
@@ -39,14 +39,14 @@ public class EnemyAI : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
-        if (timeBShots <= 0)
-        {
-            Instantiate(projectile, transform.position, Quaternion.identity);
-            timeBShots = startTimeBShots;
-        }
-        else
-        {
-            timeBShots -= Time.deltaTime;
-        }
+        //if (timeBShots <= 0)
+        //{
+        //    //Instantiate(projectile, transform.position, Quaternion.identity);
+        //    //timeBShots = startTimeBShots;
+        //}
+        //else
+        //{
+        //    //timeBShots -= Time.deltaTime;
+        //}
     }
 }

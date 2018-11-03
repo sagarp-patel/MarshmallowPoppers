@@ -6,9 +6,11 @@ public class Health : MonoBehaviour {
 
     public int hitPoints;
     private int maxHitPoints;
+    public float timeToDie;
+    public GameObject spawn;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         maxHitPoints = hitPoints;
 	}
 	
@@ -16,4 +18,24 @@ public class Health : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    IEnumerator Death()
+    {
+        yield return new WaitForSeconds(timeToDie);
+
+        Destroy(gameObject);
+    }
+
+    public int HitPoints
+    {
+        get { return hitPoints; }
+        set
+        {
+            hitPoints += value;
+            if (hitPoints > maxHitPoints)
+            {
+                hitPoints = maxHitPoints;
+            }
+        }
+    }
 }
