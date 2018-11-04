@@ -29,7 +29,6 @@ public class Player_Controller : MonoBehaviour {
 	void Update () {
         Movement();
         Attack();
-        //Jump();
 	}
 
     void Movement() {
