@@ -55,11 +55,11 @@ public class Player_Controller : MonoBehaviour {
 
     void Jump() {
         Debug.Log("Jump button is pressed", gameObject);
-        //isGrounded = false;
+        isGrounded = false;
         rigidBody.AddForce(Vector2.up * 400.0f);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision has Happened", gameObject);
         Debug.Log(collision.gameObject.tag,gameObject);
