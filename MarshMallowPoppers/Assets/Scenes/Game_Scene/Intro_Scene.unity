@@ -412,6 +412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f269fcc3aa8f5ef43a7a5c3b2ddf76c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowFire: 0
+  projectile: {fileID: 0}
   speed: 5.7
 --- !u!50 &1404352317
 Rigidbody2D:

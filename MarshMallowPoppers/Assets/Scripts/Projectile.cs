@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
     public float speed;
-
+    public int damage;
+    public int secondsToDestroy;
+    public WaitForSeconds time;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        time = new WaitForSeconds(0.01f);
+        StartCoroutine(Trajectory());
+    }
+
+    IEnumerator Trajectory()
+    {
+        yield return time;
+
+        gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+        StartCoroutine(Trajectory());
+    }
+
+    IEnumerator SelfDestruct(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        Destroy(gameObject);
+    }
+
+    public int Damage {
+        get { return damage; }
+        set { damage = value; }
+    }
 }

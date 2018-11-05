@@ -12,6 +12,8 @@ public class Player_Controller : MonoBehaviour {
     private KeyCode pause;
     private Rigidbody2D rigidBody;
     private bool isGrounded;
+    public bool allowFire;
+    public Projectile projectile;
     [SerializeField] [Range(0, 50)] private float speed = 0;
 
 
@@ -28,7 +30,6 @@ public class Player_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Movement();
-        Attack();
 	}
 
     void Movement() {
@@ -46,10 +47,20 @@ public class Player_Controller : MonoBehaviour {
             Debug.Log("SpaceBar is pressed", gameObject);
             Jump();
         }
+
+        if (Input.GetKeyDown(fire)) {
+            Attack();
+        }
     }
 
-    void Attack() {
-
+    IEnumerator Attack() {
+        if (allowFire == true)
+        {
+            allowFire = false;
+            Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+            yield return fire;
+            allowFire = true;
+        }
     }
 
     void Jump() {
