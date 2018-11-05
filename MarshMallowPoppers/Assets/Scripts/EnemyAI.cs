@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     public float retreatDistance;
 
     private Transform player;
-    //public GameObject projectile;
+    public GameObject projectile;
 
     //private float timeBShots;
     //public float startTimeBShots;

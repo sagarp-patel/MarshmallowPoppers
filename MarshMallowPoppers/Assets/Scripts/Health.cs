@@ -43,12 +43,12 @@ public class Health : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Projectile")
         {
-            //Projectile otherProjectile = collision.gameObject.GetComponent<Projectile>();
+            Projectile otherProjectile = collision.gameObject.GetComponent<Projectile>();
 
 
-           // hitPoints -= otherProjectile.Damage;
+           hitPoints -= otherProjectile.Damage;
 
-            //Destroy(otherProjectile.gameObject);
+            Destroy(otherProjectile.gameObject);
         }else if(collision.gameObject.tag == "Enemy"){
             hitPoints -= 10;
         }

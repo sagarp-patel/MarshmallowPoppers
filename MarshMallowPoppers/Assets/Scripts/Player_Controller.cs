@@ -15,6 +15,7 @@ public class Player_Controller : MonoBehaviour {
     public bool allowFire;
     public Projectile projectile;
     [SerializeField] [Range(0, 50)] private float speed = 0;
+    private Weapon weapon;
 
 
     // Use this for initialization
@@ -25,16 +26,20 @@ public class Player_Controller : MonoBehaviour {
         jump      = KeyCode.Space;
         fire      = KeyCode.Mouse0;
         isGrounded = true;
+        weapon = GetComponentInChildren<Weapon>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        //float rad = Mathf.Atan2(Input.mousePosition.y - transform.position.y,Input.mousePosition.x - transform.position.x);
+        //float angle_deg = (180/Mathf.PI)*rad;
+        //this.transform.rotation = Quaternion.Euler(0, 0, angle_deg);
         Movement();
 	}
 
     void Movement() {
         Health health = gameObject.GetComponent<Health>();
-        if (health.HitPoints > 0) {
+        if (health.HitPoints >= 0) {
             if (Input.GetKey(moveRight))
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -51,20 +56,17 @@ public class Player_Controller : MonoBehaviour {
             }
 
             if (Input.GetMouseButton(0)) {
-                Instantiate(projectile, transform.position, Quaternion.identity);
+                //Instantiate(projectile, transform.position, Quaternion.identity);
                 Attack();
             }
         }
     }
 
-    IEnumerator Attack() {
-        if (allowFire == true)
-        {
-            allowFire = false;
-            Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
-            yield return fire;
-            allowFire = true;
-        }
+    void Attack() {
+
+        //Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
+
+        weapon.Fire();
     }
 
     void Jump() {
