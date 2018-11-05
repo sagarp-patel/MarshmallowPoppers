@@ -413,7 +413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowFire: 0
-  projectile: {fileID: 0}
+  projectile: {fileID: 114945570305697038, guid: 522f756dbca4dc4489eee2b538c4bc83,
+    type: 2}
   speed: 5.7
 --- !u!50 &1404352317
 Rigidbody2D:

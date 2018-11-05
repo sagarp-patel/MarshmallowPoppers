@@ -46,6 +46,7 @@ public class Player_Controller : MonoBehaviour {
         {
             Debug.Log("SpaceBar is pressed", gameObject);
             Jump();
+            Instantiate(projectile, transform.position, Quaternion.identity);
         }
 
         if (Input.GetKeyDown(fire)) {
