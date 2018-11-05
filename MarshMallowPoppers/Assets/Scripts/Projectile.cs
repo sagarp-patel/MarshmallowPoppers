@@ -5,20 +5,21 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
     public float speed;
     public int damage;
-    public int secondsToDestroy;
+    public float secondsToDestroy;
     public WaitForSeconds time;
 
 	// Use this for initialization
 	void Start () {
         time = new WaitForSeconds(0.01f);
         StartCoroutine(Trajectory());
+        StartCoroutine(SelfDestruct(secondsToDestroy));
     }
 
     IEnumerator Trajectory()
     {
         yield return time;
 
-        gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        gameObject.transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         StartCoroutine(Trajectory());
     }

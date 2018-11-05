@@ -33,24 +33,27 @@ public class Player_Controller : MonoBehaviour {
 	}
 
     void Movement() {
+        Health health = gameObject.GetComponent<Health>();
+        if (health.HitPoints > 0) {
+            if (Input.GetKey(moveRight))
+            {
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(moveLeft)) {
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+            }
 
-        if (Input.GetKey(moveRight))
-        {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-        }
-        if (Input.GetKey(moveLeft)) {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-        }
+            if (Input.GetKeyDown(jump) && isGrounded == true)
+            {
+                Debug.Log("SpaceBar is pressed", gameObject);
+                Jump();
+                //Instantiate(projectile, transform.position, Quaternion.identity);
+            }
 
-        if (Input.GetKeyDown(jump) && isGrounded == true)
-        {
-            Debug.Log("SpaceBar is pressed", gameObject);
-            Jump();
-            Instantiate(projectile, transform.position, Quaternion.identity);
-        }
-
-        if (Input.GetKeyDown(fire)) {
-            Attack();
+            if (Input.GetMouseButton(0)) {
+                Instantiate(projectile, transform.position, Quaternion.identity);
+                Attack();
+            }
         }
     }
 
@@ -58,7 +61,7 @@ public class Player_Controller : MonoBehaviour {
         if (allowFire == true)
         {
             allowFire = false;
-            Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+            Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
             yield return fire;
             allowFire = true;
         }
