@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb4d101c8bf7324394dda7d1fd790f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  hitPoints: 1000
   timeToDie: 0
   spawn: {fileID: 0}
 --- !u!114 &1404352316
