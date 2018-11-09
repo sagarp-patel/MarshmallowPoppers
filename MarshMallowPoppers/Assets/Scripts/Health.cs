@@ -8,7 +8,10 @@ public class Health : MonoBehaviour
     public float timeToDie;
     public GameObject spawn;
     private int maxHealth;
-
+    public enum Type { CHOCOLATE, MARSHMALLOW, PEPPERMINT};
+    public Type healthType;
+    public enum PlayerType { ENEMY, PLAYER};
+    public PlayerType playerType;
 
     // Use this for initialization
     void Start()
@@ -29,12 +32,12 @@ public class Health : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToDie);
 
-        //Destroy(gameObject);
+        Destroy(gameObject);
 
         hitPoints = maxHealth;
         Debug.Log("I am dead");
         Spawn respawn = spawn.GetComponent<Spawn>();
-        respawn.Respawn();
+        //respawn.Respawn();
     }
 
     public int HitPoints
@@ -58,20 +61,26 @@ public class Health : MonoBehaviour
             spawn = value;
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
+    
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Projectile")
+        if (collision.gameObject.tag == "Projectile" )
         {
             Projectile otherProjectile = collision.gameObject.GetComponent<Projectile>();
-
             Debug.Log("I am colliding with another object!");
+            if (playerType == PlayerType.ENEMY && otherProjectile.playerType == Projectile.PlayerType.PLAYER) {
+                hitPoints -= otherProjectile.Damage;
+            }
 
-            hitPoints -= otherProjectile.Damage;
+            if (playerType == PlayerType.PLAYER && otherProjectile.playerType == Projectile.PlayerType.ENEMY)
+            {
+                hitPoints -= otherProjectile.Damage;
+            }
 
             Destroy(otherProjectile.gameObject);
         }
     }
+    
 }
 
 

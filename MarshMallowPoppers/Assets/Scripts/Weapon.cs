@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
     public Projectile projectile;
-
+    public enum PlayerType { ENEMY, PLAYER };
+    public PlayerType playerType;
     // Use this for initialization
     void Start () {
 		
@@ -18,5 +19,6 @@ public class Weapon : MonoBehaviour {
     public void Fire() {
         Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y);
         Instantiate(projectile, spawnPos, Quaternion.identity);
+       
     }
 }

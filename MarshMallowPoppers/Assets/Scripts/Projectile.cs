@@ -7,9 +7,10 @@ public class Projectile : MonoBehaviour {
     public int damage;
     public float secondsToDestroy;
     public WaitForSeconds time;
-
-	// Use this for initialization
-	void Start () {
+    public enum PlayerType { ENEMY, PLAYER };
+    public PlayerType playerType;
+    // Use this for initialization
+    void Start () {
         time = new WaitForSeconds(0.01f);
         StartCoroutine(Trajectory());
         StartCoroutine(SelfDestruct(secondsToDestroy));
