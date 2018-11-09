@@ -27,6 +27,7 @@ public class Player_Controller : MonoBehaviour {
         fire      = KeyCode.Mouse0;
         isGrounded = true;
         weapon = GetComponentInChildren<Weapon>();
+        Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>());
 	}
 	
 	// Update is called once per frame

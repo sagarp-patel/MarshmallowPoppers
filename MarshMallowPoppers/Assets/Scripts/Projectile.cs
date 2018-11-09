@@ -10,10 +10,11 @@ public class Projectile : MonoBehaviour {
     public enum PlayerType { ENEMY, PLAYER };
     public PlayerType playerType;
     // Use this for initialization
-    void Start () {
+    void Start() {
         time = new WaitForSeconds(0.01f);
         StartCoroutine(Trajectory());
         StartCoroutine(SelfDestruct(secondsToDestroy));
+        
     }
 
     IEnumerator Trajectory()
@@ -35,5 +36,18 @@ public class Projectile : MonoBehaviour {
     public int Damage {
         get { return damage; }
         set { damage = value; }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && playerType == PlayerType.PLAYER)
+        {
+            Physics2D.IgnoreCollision(gameObject.GetComponent<CircleCollider2D>(), collision.gameObject.GetComponent<BoxCollider2D>());
+        }
+
+        if (collision.gameObject.tag == "Enemy" && playerType == PlayerType.ENEMY)
+        {
+
+        }
     }
 }

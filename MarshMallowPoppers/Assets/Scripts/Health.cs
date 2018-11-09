@@ -76,6 +76,11 @@ public class Health : MonoBehaviour
                 hitPoints -= otherProjectile.Damage;
             }
 
+            if (playerType == PlayerType.PLAYER && otherProjectile.playerType == Projectile.PlayerType.PLAYER) {
+                Debug.Log("Player Bullet is colliding with Player");
+                
+            }
+
             if (playerType == PlayerType.PLAYER && otherProjectile.playerType == Projectile.PlayerType.ENEMY)
             {
                 hitPoints -= otherProjectile.Damage;
