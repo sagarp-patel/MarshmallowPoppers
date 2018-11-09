@@ -31,13 +31,17 @@ public class Health : MonoBehaviour
     IEnumerator Death()
     {
         yield return new WaitForSeconds(timeToDie);
+        if (playerType == PlayerType.PLAYER) {
+            hitPoints = maxHealth;
+            Debug.Log("I am dead");
+            Spawn respawn = spawn.GetComponent<Spawn>();
+            respawn.Respawn();
+        }
 
-        Destroy(gameObject);
-
-        hitPoints = maxHealth;
-        Debug.Log("I am dead");
-        Spawn respawn = spawn.GetComponent<Spawn>();
-        //respawn.Respawn();
+        if (playerType == PlayerType.ENEMY)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public int HitPoints
