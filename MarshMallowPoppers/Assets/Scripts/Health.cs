@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
     public enum PlayerType { ENEMY, PLAYER};
     public PlayerType playerType;
 
+    public GameObject particle;
+
     // Use this for initialization
     void Start()
     {
@@ -40,6 +42,7 @@ public class Health : MonoBehaviour
 
         if (playerType == PlayerType.ENEMY)
         {
+            Instantiate(particle, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
