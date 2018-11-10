@@ -16,23 +16,37 @@ public class Weapon : MonoBehaviour {
 		
 	}
 
-    public void Fire() { 
-        if (Input.mousePosition.x > transform.position.x) {
-            Vector2 spawnPos = new Vector2(transform.position.x + 1, transform.position.y);
+    public void Fire() {
+
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (mousePosition.x > transform.position.x && mousePosition.x < transform.position.x + .5f)
+        {
+            Debug.Log("mouse Position > transform position");
+            Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y + .55f);
+            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Instantiate(projectile, spawnPos, rotation);
+        }else if (transform.position.x > mousePosition.x)
+        {
+            Vector2 spawnPos = new Vector2(transform.position.x - .55f, transform.position.y);
+            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Instantiate(projectile, spawnPos, rotation);
+        }else if (mousePosition.x > transform.position.x) {
+            Debug.Log("mouse Position > transform position");
+            Vector2 spawnPos = new Vector2(transform.position.x + .75f, transform.position.y);
             Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             Instantiate(projectile, spawnPos, rotation);
         }
 
-        if (transform.position.x > Input.mousePosition.x)
-        {
-            Vector2 spawnPos = new Vector2(transform.position.x - 2, transform.position.y);
-            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            Instantiate(projectile, spawnPos, rotation);
-        }
+        
+
+
 
 
     }
