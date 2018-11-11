@@ -5206,7 +5206,7 @@ Transform:
   m_GameObject: {fileID: 1675930229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1, y: 0.07, z: 0.07835467}
-  m_LocalScale: {x: 2.8524997, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1404352314}
   m_RootOrder: 1
@@ -5225,6 +5225,7 @@ MonoBehaviour:
   projectile: {fileID: 114945570305697038, guid: 522f756dbca4dc4489eee2b538c4bc83,
     type: 2}
   playerType: 1
+  rateOfFire: 60
 --- !u!1 &1752076949
 GameObject:
   m_ObjectHideFlags: 0

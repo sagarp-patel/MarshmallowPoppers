@@ -22,12 +22,20 @@ public class Weapon : MonoBehaviour {
 
         if (mousePosition.x > transform.position.x && mousePosition.x < transform.position.x + .5f)
         {
-            Debug.Log("mouse Position > transform position");
-            Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y + .55f);
-            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            Instantiate(projectile, spawnPos, rotation);
+            if (mousePosition.y > transform.position.y + 1.0f) {
+                Debug.Log("mouse Position > transform position");
+                Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y + .55f);
+                Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                Instantiate(projectile, spawnPos, rotation);
+            } else if (transform.position.y - 1.0f > mousePosition.y) {
+                Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y - .70f);
+                Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                Instantiate(projectile, spawnPos, rotation);
+            }
         }else if (transform.position.x > mousePosition.x)
         {
             Vector2 spawnPos = new Vector2(transform.position.x - .55f, transform.position.y);
@@ -43,11 +51,6 @@ public class Weapon : MonoBehaviour {
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             Instantiate(projectile, spawnPos, rotation);
         }
-
         
-
-
-
-
     }
 }
