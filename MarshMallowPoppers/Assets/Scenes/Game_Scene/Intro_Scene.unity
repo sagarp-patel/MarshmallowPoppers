@@ -4944,7 +4944,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587616549}
   m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -6.8, y: 16.1, z: -0.18124986}
+  m_LocalPosition: {x: -6.8, y: 18.8, z: -0.18124986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4966,7 +4966,7 @@ GameObject:
   - component: {fileID: 832592726}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5260,6 +5260,8 @@ MonoBehaviour:
   stoppingDistance: 3
   retreatDistance: 2
   projectile: {fileID: 1054053464196110, guid: 522f756dbca4dc4489eee2b538c4bc83, type: 2}
+  direction: 0
+  scale: {x: 0, y: 0}
 --- !u!50 &1752076951
 Rigidbody2D:
   serializedVersion: 4
@@ -11341,7 +11343,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2074832288}
   m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -6.8, y: 16.1, z: -0.18124986}
+  m_LocalPosition: {x: -6.8, y: 17.5, z: -0.18124986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-
+    Rigidbody2D rb;
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
@@ -15,11 +15,17 @@ public class EnemyAI : MonoBehaviour
     //private float timeBShots;
     //public float startTimeBShots;
 
+    public float direction;
+    public Vector2 scale;
+    bool facingRight;
+
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        rb = GetComponent<Rigidbody2D>();
+        scale = transform.localScale;
+        direction = -1.0f;
         //timeBShots = startTimeBShots;
     }
 
@@ -39,6 +45,15 @@ public class EnemyAI : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
+        if (transform.position.x < -10.0f)
+        {
+            direction = 1.0f;
+        }
+        else if (transform.position.x > 10.0f)
+        {
+            direction = -1.0f;
+        }
+
         //if (timeBShots <= 0)
         //{
         //    //Instantiate(projectile, transform.position, Quaternion.identity);
@@ -48,5 +63,32 @@ public class EnemyAI : MonoBehaviour
         //{
         //    //timeBShots -= Time.deltaTime;
         //}
+    }
+
+    void EnemyFace()
+    {
+        if (direction > 0)
+        {
+            facingRight = true;
+        }
+        else if (direction < 0)
+        {
+            facingRight = false;
+        }
+        if (((facingRight) && scale.x < 0) || ((facingRight) && (scale.x > 0)))
+        {
+            scale.x += -1;
+        }
+        transform.localScale = scale;
+    }
+
+    void JumpTrigger(Collider2D coll)
+    {
+        switch(coll.tag)
+        {
+            case "Ground":
+                rb.AddForce(Vector2.up * 550.0f);
+                break;
+        }
     }
 }
