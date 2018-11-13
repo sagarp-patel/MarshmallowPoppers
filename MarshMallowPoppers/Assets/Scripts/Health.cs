@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (hitPoints <= 0)
+        if (hitPoints <= 0 && gameObject!= null)
         {
             StartCoroutine(Death());
         }
