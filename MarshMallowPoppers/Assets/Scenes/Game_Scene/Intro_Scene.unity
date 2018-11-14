@@ -6629,6 +6629,11 @@ Prefab:
       propertyPath: m_Name
       value: Circle
       objectReference: {fileID: 0}
+    - target: {fileID: 114596637900144742, guid: c680991c9c595c44da9375b148562e75,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c680991c9c595c44da9375b148562e75, type: 2}
   m_IsPrefabAsset: 0
