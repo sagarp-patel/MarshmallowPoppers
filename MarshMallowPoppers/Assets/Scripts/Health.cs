@@ -79,19 +79,18 @@ public class Health : MonoBehaviour
             if (playerType == PlayerType.ENEMY && otherProjectile.playerType == Projectile.PlayerType.PLAYER) {
                 hitPoints -= otherProjectile.Damage;
             }
-
             if (playerType == PlayerType.PLAYER && otherProjectile.playerType == Projectile.PlayerType.PLAYER) {
                 Debug.Log("Player Bullet is colliding with Player");
                 
             }
-
-            if (playerType == PlayerType.PLAYER && otherProjectile.playerType == Projectile.PlayerType.ENEMY)
-            {
-                hitPoints -= otherProjectile.Damage;
-            }
-
             Destroy(otherProjectile.gameObject);
         }
+
+        if (collision.gameObject.tag == "Player" && playerType == Health.PlayerType.ENEMY) {
+            hitPoints = 0;
+            StartCoroutine(Death());
+        }
+
     }
     
 }
