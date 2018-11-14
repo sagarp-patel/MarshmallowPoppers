@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (hitPoints <= 0 && gameObject!= null)
+        if (hitPoints <= 0 )
         {
             StartCoroutine(Death());
         }
@@ -43,7 +43,8 @@ public class Health : MonoBehaviour
         if (playerType == PlayerType.ENEMY)
         {
             Instantiate(particle, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
