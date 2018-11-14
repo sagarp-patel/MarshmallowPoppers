@@ -7,6 +7,8 @@ TagManager:
   - Undefined
   - Projectile
   - Enemy
+  - Ground
+  - Health
   layers:
   - Default
   - TransparentFX
