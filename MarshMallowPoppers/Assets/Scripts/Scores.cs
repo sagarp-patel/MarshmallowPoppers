@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scores : MonoBehaviour {
 
-    //public GameObject funny;
+    public GameObject bulletScore;
     public int score;
 
     // Use this for initialization
@@ -19,7 +19,7 @@ public class Scores : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.bulletScore.tag == "Enemy")
         {
             score = score  + 5;
             Debug.Log(score.ToString());
