@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Controller : MonoBehaviour {
+public class Player_Controller : MonoBehaviour
+{
 
     private KeyCode moveRight;
     private KeyCode moveLeft;
@@ -19,7 +20,8 @@ public class Player_Controller : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         rigidBody = GetComponent<Rigidbody2D>();
         moveRight = KeyCode.D;
         moveLeft  = KeyCode.A;
@@ -31,21 +33,25 @@ public class Player_Controller : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         //float rad = Mathf.Atan2(Input.mousePosition.y - transform.position.y,Input.mousePosition.x - transform.position.x);
         //float angle_deg = (180/Mathf.PI)*rad;
         //this.transform.rotation = Quaternion.Euler(0, 0, angle_deg);
         Movement();
 	}
 
-    void Movement() {
+    void Movement()
+    {
         Health health = gameObject.GetComponent<Health>();
-        if (health.HitPoints >= 0) {
+        if (health.HitPoints >= 0)
+        {
             if (Input.GetKey(moveRight))
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
             }
-            if (Input.GetKey(moveLeft)) {
+            if (Input.GetKey(moveLeft))
+            {
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
             }
 
@@ -56,21 +62,24 @@ public class Player_Controller : MonoBehaviour {
                 //Instantiate(projectile, transform.position, Quaternion.identity);
             }
 
-            if (Input.GetMouseButton(0)) {
+            if (Input.GetMouseButton(0))
+            {
                 //Instantiate(projectile, transform.position, Quaternion.identity);
                 Attack();
             }
         }
     }
 
-    void Attack() {
+    void Attack()
+    {
 
         //Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
 
         weapon.Fire();
     }
 
-    void Jump() {
+    void Jump()
+    {
         Debug.Log("Jump button is pressed", gameObject);
         isGrounded = false;
         rigidBody.AddForce(Vector2.up * 400.0f);
@@ -85,12 +94,14 @@ public class Player_Controller : MonoBehaviour {
             isGrounded = true;
         }
 
-        if (collision.gameObject.tag == "Health") {
+        if (collision.gameObject.tag == "Health")
+        {
             Health hitPoints = gameObject.GetComponent<Health>();
             hitPoints.hitPoints += 10;
         }
 
-        if (collision.gameObject.tag == "Enemy") {
+        if (collision.gameObject.tag == "Enemy")
+        {
             Health hitPoints = gameObject.GetComponent<Health>();
             hitPoints.hitPoints -= 10;
         }
