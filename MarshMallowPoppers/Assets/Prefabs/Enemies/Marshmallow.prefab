@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114596637900144742}
   - component: {fileID: 114187609234895014}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Marshmallow
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   hitPoints: 10
   timeToDie: 0
   spawn: {fileID: 1054053464196110, guid: 522f756dbca4dc4489eee2b538c4bc83, type: 2}
-  healthType: 2
+  healthType: 1
   playerType: 0
   particle: {fileID: 1176794300856084, guid: 9c9bf99f9232c334897933f8ac278264, type: 2}
 --- !u!114 &114596637900144742

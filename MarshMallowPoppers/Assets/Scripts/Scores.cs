@@ -19,11 +19,11 @@ public class Scores : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.bulletScore.tag == "Enemy")
+       /* if (collision.bulletScore.tag == "Enemy")
         {
             score = score  + 5;
             Debug.Log(score.ToString());
-        }
+        }*/
 
      }
 }

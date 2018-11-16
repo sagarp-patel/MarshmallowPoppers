@@ -47,7 +47,6 @@ public class Health : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
     public int HitPoints
     {
         get { return hitPoints; }
