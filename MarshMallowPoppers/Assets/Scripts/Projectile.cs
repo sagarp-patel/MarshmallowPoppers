@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour {
     public float secondsToDestroy;
     public WaitForSeconds time;
     public enum PlayerType { ENEMY, PLAYER };
+    public enum ProjectileType { CHOCOLATE, PEPPERMINT, MARSHMALLOW};
+    public ProjectileType projectileType;
     public PlayerType playerType;
     public Animator animator;
     // Use this for initialization
