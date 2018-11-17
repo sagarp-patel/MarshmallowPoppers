@@ -9,12 +9,12 @@ public class Projectile : MonoBehaviour {
     public WaitForSeconds time;
     public enum PlayerType { ENEMY, PLAYER };
     public PlayerType playerType;
+    public Animator animator;
     // Use this for initialization
     void Start() {
         time = new WaitForSeconds(0.01f);
         StartCoroutine(Trajectory());
         StartCoroutine(SelfDestruct(secondsToDestroy));
-        
     }
 
     IEnumerator Trajectory()

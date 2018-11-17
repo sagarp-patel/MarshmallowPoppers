@@ -5226,10 +5226,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f269fcc3aa8f5ef43a7a5c3b2ddf76c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowFire: 0
+  allowFire: 1
   projectile: {fileID: 114945570305697038, guid: 522f756dbca4dc4489eee2b538c4bc83,
     type: 2}
-  speed: 5.7
+  speed: 6
+  animator: {fileID: 1404352319}
 --- !u!50 &1404352317
 Rigidbody2D:
   serializedVersion: 4
@@ -5284,7 +5285,7 @@ Animator:
   m_GameObject: {fileID: 1404352312}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f180d7a19decd634994ddffde9badd75, type: 2}
+  m_Controller: {fileID: 9100000, guid: a79e9f8f381b7c043ae363ef94eef02b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
