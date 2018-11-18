@@ -27,6 +27,7 @@ public class Pause_Menu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            //Debug.Log("Boolean Value: " + GameIsPaused);
             if (GameIsPaused)
             {
                 Resume();
@@ -42,6 +43,7 @@ public class Pause_Menu : MonoBehaviour
     {
         Pause_Menu_UI.SetActive(false);
         DisableTimerPanel.SetActive(true);
+        OptionsMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
@@ -51,6 +53,7 @@ public class Pause_Menu : MonoBehaviour
     {
         OptionsMenuUI.SetActive(false);
         Pause_Menu_UI.SetActive(true);
+        GameIsPaused = false;
     }
 
     public void Pause()
@@ -64,6 +67,7 @@ public class Pause_Menu : MonoBehaviour
     
     public void ResumeButton()
     {
+        GameIsPaused = false;
         Time.timeScale = 1f;
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
         Resume();

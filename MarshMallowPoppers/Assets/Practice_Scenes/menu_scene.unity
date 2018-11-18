@@ -566,7 +566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ca3604196f1994584d958f580942d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 0}
   OptionsMenuUI: {fileID: 0}
 --- !u!1 &455835528
 GameObject:
@@ -1131,7 +1130,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1143252231}
   - component: {fileID: 1143252230}
-  - component: {fileID: 1143252232}
   m_Layer: 0
   m_Name: BackGroundAudio
   m_TagString: Music
@@ -1247,17 +1245,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1143252232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1143252229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ea04a8f23fa1ff419b204de8b64a756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1207908520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,8 +1380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ca3604196f1994584d958f580942d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 1565112139233822, guid: 1188ae49cc5ba6e4ca2daa443f7d57f3,
-    type: 2}
   OptionsMenuUI: {fileID: 0}
 --- !u!1 &1331241855
 GameObject:
@@ -1450,6 +1435,7 @@ MonoBehaviour:
   Current_Audio: {fileID: 1143252230}
   Sound_Text: {fileID: 2083061204}
   Adjust_Volume: {fileID: 0}
+  DisableSong: {fileID: 0}
 --- !u!114 &1331241858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,6 +1624,7 @@ MonoBehaviour:
   Current_Audio: {fileID: 1143252230}
   Sound_Text: {fileID: 0}
   Adjust_Volume: {fileID: 1764772350}
+  DisableSong: {fileID: 0}
 --- !u!114 &1764772350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2222,7 +2209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ca3604196f1994584d958f580942d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 0}
   OptionsMenuUI: {fileID: 1037550739}
 --- !u!1 &2060825981
 GameObject:
@@ -2511,5 +2497,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ca3604196f1994584d958f580942d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 0}
   OptionsMenuUI: {fileID: 1037550739}
