@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int hitPoints;
+    public int lives;
     public float timeToDie;
     public GameObject spawn;
     private int maxHealth;
@@ -37,6 +38,7 @@ public class Health : MonoBehaviour
             hitPoints = maxHealth;
             Debug.Log("I am dead");
             Spawn respawn = spawn.GetComponent<Spawn>();
+            lives--;
             respawn.Respawn();
         }
 

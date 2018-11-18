@@ -9,8 +9,8 @@ public class HealthPack : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Picked up Health");
-            //Destroy(gameObject);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
+            //gameObject.SetActive(false);
         }
     }
 }

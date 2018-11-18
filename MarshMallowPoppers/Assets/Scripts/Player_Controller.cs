@@ -112,5 +112,11 @@ public class Player_Controller : MonoBehaviour
             Health hitPoints = gameObject.GetComponent<Health>();
             hitPoints.hitPoints -= 10;
         }
+
+        if (collision.gameObject.tag == "Lives")
+        {
+            Health lives = gameObject.GetComponent<Health>();
+            lives.lives += 1;
+        }
     }
 }

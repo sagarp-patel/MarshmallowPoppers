@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Ground
   - Health
+  - Music
+  - HealthPack
+  - Lives
   layers:
   - Default
   - TransparentFX
