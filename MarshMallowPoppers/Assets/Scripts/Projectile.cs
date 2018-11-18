@@ -8,13 +8,15 @@ public class Projectile : MonoBehaviour {
     public float secondsToDestroy;
     public WaitForSeconds time;
     public enum PlayerType { ENEMY, PLAYER };
+    public enum ProjectileType { CHOCOLATE, PEPPERMINT, MARSHMALLOW};
+    public ProjectileType projectileType;
     public PlayerType playerType;
+    public Animator animator;
     // Use this for initialization
     void Start() {
         time = new WaitForSeconds(0.01f);
         StartCoroutine(Trajectory());
         StartCoroutine(SelfDestruct(secondsToDestroy));
-        
     }
 
     IEnumerator Trajectory()

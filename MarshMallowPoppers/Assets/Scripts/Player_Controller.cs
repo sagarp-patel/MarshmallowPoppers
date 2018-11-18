@@ -17,7 +17,8 @@ public class Player_Controller : MonoBehaviour
     public Projectile projectile;
     [SerializeField] [Range(0, 50)] private float speed = 0;
     private Weapon weapon;
-
+    public Animator animator;
+    private float movement_speed; //Created for Animator
 
     // Use this for initialization
     void Start ()
@@ -38,7 +39,11 @@ public class Player_Controller : MonoBehaviour
         //float rad = Mathf.Atan2(Input.mousePosition.y - transform.position.y,Input.mousePosition.x - transform.position.x);
         //float angle_deg = (180/Mathf.PI)*rad;
         //this.transform.rotation = Quaternion.Euler(0, 0, angle_deg);
+        movement_speed = 0.0f;
         Movement();
+        animator.SetFloat("Speed", movement_speed);
+
+
 	}
 
     void Movement()
@@ -48,11 +53,13 @@ public class Player_Controller : MonoBehaviour
         {
             if (Input.GetKey(moveRight))
             {
+                movement_speed = speed;
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
             }
             if (Input.GetKey(moveLeft))
             {
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
+                movement_speed = speed * -1.0f;
             }
 
             if (Input.GetKeyDown(jump) && isGrounded == true)
