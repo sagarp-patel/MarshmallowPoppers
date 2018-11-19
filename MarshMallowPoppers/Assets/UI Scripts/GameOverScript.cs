@@ -20,16 +20,16 @@ public class GameOverScript : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1f;
-        //DisableScript.GetComponent<Pause_Menu>().enabled = true;
-        //DisablePlayer.GetComponent<Player_Controller>().enabled = true;
+        DisableScript.GetComponent<Pause_Menu>().enabled = true;
+        DisablePlayer.GetComponent<Player_Controller>().enabled = true;
         SceneManager.LoadScene("intro_scene");
     }
 
     public void Quit()
     {
         Time.timeScale = 1f;
-        //DisableScript.GetComponent<Pause_Menu>().enabled = true;
-        //DisablePlayer.GetComponent<Player_Controller>().enabled = true;
+        DisableScript.GetComponent<Pause_Menu>().enabled = true;
+        DisablePlayer.GetComponent<Player_Controller>().enabled = true;
         SceneManager.LoadScene("menu_scene");
     }
 }
