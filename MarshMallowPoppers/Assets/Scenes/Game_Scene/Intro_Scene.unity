@@ -602,7 +602,7 @@ Prefab:
     - target: {fileID: 114584235487327162, guid: b9280754cac932c4ebddcf8d005cbf88,
         type: 2}
       propertyPath: startingTime
-      value: 3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224580252218491004, guid: b9280754cac932c4ebddcf8d005cbf88,
         type: 2}
@@ -689,6 +689,16 @@ Prefab:
       propertyPath: DisableScript
       value: 
       objectReference: {fileID: 1451331424}
+    - target: {fileID: 114364040599368888, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: DisableScript
+      value: 
+      objectReference: {fileID: 1451331424}
+    - target: {fileID: 114364040599368888, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: DisablePlayer
+      value: 
+      objectReference: {fileID: 1404352312}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
   m_IsPrefabAsset: 0
