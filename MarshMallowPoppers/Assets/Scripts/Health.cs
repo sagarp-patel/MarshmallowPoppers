@@ -79,6 +79,12 @@ public class Health : MonoBehaviour
             Debug.Log("I am colliding with another object!");
             if (playerType == PlayerType.ENEMY && otherProjectile.playerType == Projectile.PlayerType.PLAYER) {
                 hitPoints -= otherProjectile.Damage;
+                if (hitPoints == 0 || hitPoints <= 0)
+                {
+                    GameObject begin = GameObject.Find("Player");
+                    ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
+                    callfunction.UpdateScore();
+                }
             }
             if (playerType == PlayerType.PLAYER && otherProjectile.playerType == Projectile.PlayerType.PLAYER) {
                 Debug.Log("Player Bullet is colliding with Player");
@@ -93,5 +99,4 @@ public class Health : MonoBehaviour
         }
 
     }
-    
 }
