@@ -5992,9 +5992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a4d41c5a731934b919290b08a7a145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1404352312}
-  enemyobject: {fileID: 0}
   score: 0
+  playerType: 1
 --- !u!1001 &1644938003
 Prefab:
   m_ObjectHideFlags: 0
