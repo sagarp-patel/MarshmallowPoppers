@@ -5,7 +5,8 @@ using UnityEngine;
 public class ScoreSystem : MonoBehaviour
 {
 
-    public GameObject bulletScore;
+    public GameObject bullet;
+    public GameObject enemyobject;
     public int score;
 
     // Use this for initialization
@@ -22,16 +23,16 @@ public class ScoreSystem : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        /* if (collision.bulletScore.tag == "Enemy")
+        if (collision.gameObject.tag == "Projectile" && collision.gameObject.tag == "Player")
          {
-             score = score  + 5;
-             Debug.Log(score.ToString());
-         }*/
-        //if (collision.bulletScore.tag == "Enemy")
-        //{
-        //    score = score  + 5;
-        //    Debug.Log(score.ToString());
-        //}
-
+            Projectile otherProjectile = collision.gameObject.GetComponent<Projectile>();
+            //score = score  + 5;
+            Debug.Log("Hello!!!!!!!!!" /*+ score.ToString()*/);
+         }
     }
+    /*
+    public void IsDestroyed(enemyobject)
+    {
+        return enemyobject == null && !ReferenceEquals(enemyobject, null);
+    }*/
 }

@@ -79,6 +79,17 @@ public class Pause_Menu : MonoBehaviour
         Pause_Menu_UI.SetActive(false);
     }
 
+    public void RestartButton()
+    {
+        Pause_Menu_UI.SetActive(false);
+        DisableTimerPanel.SetActive(true);
+        OptionsMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        SceneManager.LoadScene("intro_scene");
+        DisablePlayer.GetComponent<Player_Controller>().enabled = true;
+    }
+
     public void MainMenuButton(string MenuScene)
     {
         GameIsPaused = false;
