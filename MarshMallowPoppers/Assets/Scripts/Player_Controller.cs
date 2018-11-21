@@ -20,9 +20,12 @@ public class Player_Controller : MonoBehaviour
     public Animator animator;
     private float movement_speed; //Created for Animator
 
+    float fallZone = -10f;
+    Vector3 InitPos;  //initial position of player
     // Use this for initialization
     void Start ()
     {
+        InitPos = transform.position;
         rigidBody = GetComponent<Rigidbody2D>();
         moveRight = KeyCode.D;
         moveLeft  = KeyCode.A;
@@ -43,7 +46,10 @@ public class Player_Controller : MonoBehaviour
         Movement();
         animator.SetFloat("Speed", movement_speed);
 
-
+        if (transform.position.y < fallZone) 
+        {
+            transform.position = InitPos;
+        }
 	}
 
     void Movement()
