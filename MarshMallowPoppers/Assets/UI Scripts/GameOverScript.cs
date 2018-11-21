@@ -22,7 +22,7 @@ public class GameOverScript : MonoBehaviour
         Time.timeScale = 1f;
         DisableScript.GetComponent<Pause_Menu>().enabled = true;
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
-        SceneManager.LoadScene("Intro_scene");
+        SceneManager.LoadScene("Intro_Scene");
     }
 
     public void Quit()
