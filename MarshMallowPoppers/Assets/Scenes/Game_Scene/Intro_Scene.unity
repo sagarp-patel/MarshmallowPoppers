@@ -627,6 +627,11 @@ Prefab:
       propertyPath: DisablePlayer
       value: 
       objectReference: {fileID: 1404352312}
+    - target: {fileID: 114777616890199972, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: startingTime
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114364040599368888, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
