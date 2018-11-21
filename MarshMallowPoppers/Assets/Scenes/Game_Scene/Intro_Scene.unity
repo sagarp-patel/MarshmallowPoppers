@@ -169,6 +169,11 @@ Transform:
   m_Father: {fileID: 2090414243}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &184668165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1879770751258376, guid: b9280754cac932c4ebddcf8d005cbf88,
+    type: 2}
+  m_PrefabInternal: {fileID: 447283835}
 --- !u!1 &217352773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1224168723253558, guid: b9280754cac932c4ebddcf8d005cbf88,
@@ -656,7 +661,7 @@ Prefab:
         type: 2}
       propertyPath: OptionsMenuUI
       value: 
-      objectReference: {fileID: 2044986300}
+      objectReference: {fileID: 184668165}
     - target: {fileID: 114957590484439288, guid: b9280754cac932c4ebddcf8d005cbf88,
         type: 2}
       propertyPath: m_FontData.m_Alignment
@@ -722,6 +727,16 @@ Prefab:
       propertyPath: DisableTimerPanel
       value: 
       objectReference: {fileID: 217352773}
+    - target: {fileID: 114680269637808392, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: OptionsMenuUI
+      value: 
+      objectReference: {fileID: 184668165}
+    - target: {fileID: 114680269637808392, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: DisablePlayer
+      value: 
+      objectReference: {fileID: 1404352312}
     m_RemovedComponents:
     - {fileID: 114364040599368888, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
@@ -7314,11 +7329,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 447283835}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &2044986300 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1010350270659254, guid: b9280754cac932c4ebddcf8d005cbf88,
-    type: 2}
-  m_PrefabInternal: {fileID: 447283835}
 --- !u!1 &2074832288
 GameObject:
   m_ObjectHideFlags: 0
