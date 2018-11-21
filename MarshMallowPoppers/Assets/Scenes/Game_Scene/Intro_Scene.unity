@@ -169,6 +169,11 @@ Transform:
   m_Father: {fileID: 2090414243}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &217352773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1224168723253558, guid: b9280754cac932c4ebddcf8d005cbf88,
+    type: 2}
+  m_PrefabInternal: {fileID: 447283835}
 --- !u!1001 &217805230
 Prefab:
   m_ObjectHideFlags: 0
@@ -635,7 +640,7 @@ Prefab:
     - target: {fileID: 114777616890199972, guid: b9280754cac932c4ebddcf8d005cbf88,
         type: 2}
       propertyPath: startingTime
-      value: 2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114760032152350558, guid: b9280754cac932c4ebddcf8d005cbf88,
         type: 2}
@@ -697,6 +702,26 @@ Prefab:
       propertyPath: RestartButton
       value: 
       objectReference: {fileID: 290700091}
+    - target: {fileID: 114280301930638640, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: Current_Audio
+      value: 
+      objectReference: {fileID: 529881891}
+    - target: {fileID: 114174368318378718, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: Current_Audio
+      value: 
+      objectReference: {fileID: 529881891}
+    - target: {fileID: 114623946749167790, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: DisablePlayer
+      value: 
+      objectReference: {fileID: 1404352312}
+    - target: {fileID: 114623946749167790, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: DisableTimerPanel
+      value: 
+      objectReference: {fileID: 217352773}
     m_RemovedComponents:
     - {fileID: 114364040599368888, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
