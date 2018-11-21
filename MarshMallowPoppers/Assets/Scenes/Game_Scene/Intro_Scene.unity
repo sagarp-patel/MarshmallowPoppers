@@ -647,6 +647,26 @@ Prefab:
       propertyPath: OptionsMenuUI
       value: 
       objectReference: {fileID: 2044986300}
+    - target: {fileID: 114957590484439288, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114957590484439288, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Score: 0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 224843694532897040, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -270
+      objectReference: {fileID: 0}
+    - target: {fileID: 224843694532897040, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114364040599368888, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
@@ -5825,7 +5845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  displayscore: {fileID: 0}
+  displayscore: {fileID: 2021050633}
 --- !u!1001 &1644938003
 Prefab:
   m_ObjectHideFlags: 0
@@ -7228,6 +7248,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c680991c9c595c44da9375b148562e75, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &2021050633 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114957590484439288, guid: b9280754cac932c4ebddcf8d005cbf88,
+    type: 2}
+  m_PrefabInternal: {fileID: 447283835}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &2044986300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1010350270659254, guid: b9280754cac932c4ebddcf8d005cbf88,
