@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Health : MonoBehaviour
     public Type healthType;
     public enum PlayerType { ENEMY, PLAYER};
     public PlayerType playerType;
+    public Text displayhealth;
 
     public GameObject particle;
 
@@ -25,6 +27,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        displayhealth.text = "Health: " + hitPoints.ToString();
         if (hitPoints <= 0 )
         {
             StartCoroutine(Death());
