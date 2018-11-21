@@ -630,8 +630,23 @@ Prefab:
     - target: {fileID: 114777616890199972, guid: b9280754cac932c4ebddcf8d005cbf88,
         type: 2}
       propertyPath: startingTime
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114760032152350558, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: DisablePlayer
+      value: 
+      objectReference: {fileID: 1404352312}
+    - target: {fileID: 114967381141765394, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: DisablePlayer
+      value: 
+      objectReference: {fileID: 1404352312}
+    - target: {fileID: 114760032152350558, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: OptionsMenuUI
+      value: 
+      objectReference: {fileID: 2044986300}
     m_RemovedComponents:
     - {fileID: 114364040599368888, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
@@ -7213,6 +7228,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c680991c9c595c44da9375b148562e75, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2044986300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1010350270659254, guid: b9280754cac932c4ebddcf8d005cbf88,
+    type: 2}
+  m_PrefabInternal: {fileID: 447283835}
 --- !u!1 &2074832288
 GameObject:
   m_ObjectHideFlags: 0
