@@ -5,25 +5,33 @@ using UnityEngine.UI;
 
 public class Keep_Object : MonoBehaviour
 {
+    public Toggle[] ToggleList;
     public Toggle ToggleButton;
+    public GameObject EnableTemp;
     /*void Awake()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
         if (objs.Length > 1)
         {
-            Destroy(this.gameObject);
+            Destroy(objs[0].gameObject);
+            //Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
     }*/
+    void Start()
+     {
+         //bool togglesound = gameObject.GetComponent<Toggle>().isOn;
+         EnableTemp.SetActive(true);
+         ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
+         EnableTemp.SetActive(false);
+     }
+
+        /*
     void Awake()
     {
-        bool togglesound = gameObject.GetComponent<Toggle>().isOn;
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("Toggle");
-        if (objs.Length > 1 && togglesound)
-        {
-            Destroy(objs[0].gameObject);
-            ToggleButton.isOn = false;
-        }
-        DontDestroyOnLoad(objs[1].gameObject);
+        EnableTemp.SetActive(false);
+        ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
+        EnableTemp.SetActive(false);
     }
+    */
 }
