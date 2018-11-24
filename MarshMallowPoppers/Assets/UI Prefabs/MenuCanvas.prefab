@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224236242758075192}
   - component: {fileID: 114839011956973550}
-  - component: {fileID: 114982396056183238}
+  - component: {fileID: 114297354543189820}
   - component: {fileID: 114036181100888416}
   m_Layer: 5
   m_Name: ToggleMusicButton
@@ -860,6 +860,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OptionsMenuUI: {fileID: 1284654874660348}
+--- !u!114 &114297354543189820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1792121935609812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea04a8f23fa1ff419b204de8b64a756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToggleButton: {fileID: 114839011956973550}
 --- !u!114 &114314919152666746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1600,18 +1612,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114982396056183238
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1792121935609812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ea04a8f23fa1ff419b204de8b64a756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ToggleButton: {fileID: 114839011956973550}
 --- !u!222 &222101192787571710
 CanvasRenderer:
   m_ObjectHideFlags: 1
