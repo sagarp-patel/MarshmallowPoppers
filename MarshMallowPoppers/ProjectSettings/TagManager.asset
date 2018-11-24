@@ -12,6 +12,7 @@ TagManager:
   - Music
   - HealthPack
   - Lives
+  - Toggle
   layers:
   - Default
   - TransparentFX
