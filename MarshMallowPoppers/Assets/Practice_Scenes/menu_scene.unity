@@ -779,7 +779,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: tutorial_scene
+          m_StringArgument: Intro_Scene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1555,6 +1555,7 @@ GameObject:
   - component: {fileID: 1148213339}
   - component: {fileID: 1436959234}
   - component: {fileID: 1148213338}
+  - component: {fileID: 1148213340}
   m_Layer: 5
   m_Name: ToggleMusicButton
   m_TagString: Untagged
@@ -1599,6 +1600,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1148213340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148213337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea04a8f23fa1ff419b204de8b64a756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToggleButton: {fileID: 1436959234}
+  Object: {fileID: 1148213337}
 --- !u!1 &1264036937
 GameObject:
   m_ObjectHideFlags: 0

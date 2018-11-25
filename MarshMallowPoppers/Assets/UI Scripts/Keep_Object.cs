@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Reflection;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class Keep_Object : MonoBehaviour
 {
 //    public bool[] ToggleList;
     public Toggle ToggleButton;
-    public GameObject DisableTemp;
-    public Button ButtonClicked;
+    public GameObject Object;
+    //public GameObject DisableTemp;
+    //public GameObject EnableTemp;
+    //public Button ButtonClicked;
     //bool[] myArray = new bool[] { };
     bool[] myArray = new bool[1] { true };
+    bool current;
 
 
     //public GameObject KeepList;
@@ -26,8 +30,6 @@ public class Keep_Object : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
     }*/
-
-
 
 
     /*void Update()
@@ -72,10 +74,23 @@ public class Keep_Object : MonoBehaviour
          DontDestroyOnLoad(this.gameObject);
      }*/
 
-     /*void Update()
+     void Update()
      {
-        ToggleButton.GetComponentInChildren<Toggle>().isOn = myArray[0];
-     }*/
+        if (ToggleButton.GetComponentInChildren<Toggle>().isOn == true)
+        {
+            myArray[0] = true;
+            current = true;
+            Debug.Log("Current is " + current);
+            // Debug.Log("Toggle Button is " + ToggleButton.isOn);
+        }
+        if(ToggleButton.GetComponentInChildren<Toggle>().isOn == false)
+        {
+            myArray[0] = false;
+            current = false;
+            Debug.Log("Current is " + current);
+            //Debug.Log("Toggle Button is " + ToggleButton.isOn);
+        }
+     }
 
     void OnEnable()
     {
@@ -84,14 +99,31 @@ public class Keep_Object : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        ClearLog();
+        //GameObject[] ObjectList = GameObject.FindGameObjectsWithTag("Toggle");
+        //DontDestroyOnLoad(this.gameObject);
+
+        if (scene.name == "Intro_Scene" && myArray[0] == true)
+        {
+            Object = GameObject.FindWithTag("Toggle");
+            ToggleButton.GetComponentInChildren<Toggle>().isOn = true;
+            //DisableTemp.SetActive(false);
+            Debug.Log("Success 1");
+        }
+        else if (scene.name == "Intro_Scene" && myArray[0] == false)
+        {
+            Object = GameObject.FindWithTag("Toggle");
+            ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
+            //DisableTemp.SetActive(false);
+            Debug.Log("Success 2");
+        }
+        //ClearLog();
         //bool togglesound = gameObject.GetComponent<Toggle>().isOn;
-        GameObject[] ObjectList = GameObject.FindGameObjectsWithTag("Toggle");
+        //GameObject[] ObjectList = GameObject.FindGameObjectsWithTag("Toggle");
         /*if (ObjectList.Length > 1)
         {
             Destroy(ObjectList[0].gameObject);
         }*/
-        if (scene.name == "tutorial_scene")
+        /*if (scene.name == "tutorial_scene")
         {
             DisableTemp.SetActive(false);
             //ToggleButton.GetComponentInChildren<Toggle>().isOn = myArray[0];
@@ -100,68 +132,54 @@ public class Keep_Object : MonoBehaviour
         }
         if (scene.name == "Intro_Scene")
         {
-            //Destroy(ObjectList[0].gameObject);
-            /*if (ToggleButton.GetComponentInChildren<Toggle>().isOn == true && myArray[0] == true)
-            {
-                myArray[0] = true;
-                ToggleButton.GetComponentInChildren<Toggle>().isOn = true;
-                //Debug.Log(myArray[0]);
-            }
-            if (ToggleButton.GetComponentInChildren<Toggle>().isOn == true && myArray[0] == false)
-            {
-                myArray[0] = false;
-                ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
-                //Debug.Log(myArray[0]);
-            }
-            if (ToggleButton.GetComponentInChildren<Toggle>().isOn == false && myArray[0] == true)
-            {
-                myArray[0] = false;
-                ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
-                //Debug.Log(myArray[0]);
-            }
-            if (ToggleButton.GetComponentInChildren<Toggle>().isOn == false && myArray[0] == false)
-            {
-                myArray[0] = false;
-                ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
-                //Debug.Log(myArray[0]);
-            }*/
+            ToggleButton.GetComponentInChildren<Toggle>().isOn = false;*/
+        //Destroy(ObjectList[0].gameObject);
+        /*if (ToggleButton.GetComponentInChildren<Toggle>().isOn == true && myArray[0] == true)
+        {
+            myArray[0] = true;
+            ToggleButton.GetComponentInChildren<Toggle>().isOn = true;
             //Debug.Log(myArray[0]);
-            //Debug.Log(ObjectList[0].gameObject);
-            Debug.Log(ToggleButton.isOn);
         }
-        if (ObjectList.Length > 1 && scene.name == "menu_scene")
+        if (ToggleButton.GetComponentInChildren<Toggle>().isOn == true && myArray[0] == false)
+        {
+            myArray[0] = false;
+            ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
+            //Debug.Log(myArray[0]);
+        }
+        if (ToggleButton.GetComponentInChildren<Toggle>().isOn == false && myArray[0] == true)
+        {
+            myArray[0] = false;
+            ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
+            //Debug.Log(myArray[0]);
+        }
+        if (ToggleButton.GetComponentInChildren<Toggle>().isOn == false && myArray[0] == false)
+        {
+            myArray[0] = false;
+            ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
+            //Debug.Log(myArray[0]);
+        }*/
+        //Debug.Log(myArray[0]);
+        //Debug.Log(ObjectList[0].gameObject);
+        //Debug.Log(ToggleButton.isOn);
+        //}
+        /*if (scene.name == "menu_scene")
         {
             //Destroy(ObjectList[0].gameObject);
             //Debug.Log(ObjectList[0].gameObject);
-            DisableTemp.SetActive(false);
-            /*if (ToggleButton.GetComponentInChildren<Toggle>().isOn == true && myArray[0] == true)
+            if (myArray[0] == true)
             {
                 myArray[0] = true;
                 ToggleButton.GetComponentInChildren<Toggle>().isOn = true;
-                //Debug.Log(myArray[0]);
             }
-            if (ToggleButton.GetComponentInChildren<Toggle>().isOn == true && myArray[0] == false)
+            if (myArray[0] == false)
             {
                 myArray[0] = false;
                 ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
-                //Debug.Log(myArray[0]);
             }
-            if (ToggleButton.GetComponentInChildren<Toggle>().isOn == false && myArray[0] == true)
-            {
-                myArray[0] = false;
-                ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
-                //Debug.Log(myArray[0]);
-            }
-            if (ToggleButton.GetComponentInChildren<Toggle>().isOn == false && myArray[0] == false)
-            {
-                myArray[0] = false;
-                ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
-                //Debug.Log(myArray[0]);
-            }*/
             Debug.Log(ToggleButton.isOn);
         }
         Debug.Log("OnSceneLoaded: " + scene.name);
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);*/
     }
 
 
