@@ -17,7 +17,7 @@ public class ScoreSystem : MonoBehaviour
 
     public void UpdateScore()
     {
-        score = score  + 5;
+        score = score  + 1;
         if(score > 9999999)
         {
             displayscore.text = "Score: ∞";

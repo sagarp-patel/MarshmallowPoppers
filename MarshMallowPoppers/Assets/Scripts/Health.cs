@@ -14,20 +14,30 @@ public class Health : MonoBehaviour
     public Type healthType;
     public enum PlayerType { ENEMY, PLAYER};
     public PlayerType playerType;
+    public GameObject heartobject1;
+    public GameObject heartobject2;
+    public GameObject heartobject3;
+    public GameObject GameOver;
+    public GameObject DisableUI;
+
     public Text displayhealth;
+    public Image HealthBarImage;
+    public float ratio;
 
     public GameObject particle;
 
-    // Use this for initialization
+    //Use this for initialization
     void Start()
     {
         maxHealth = hitPoints;
+        ratio = maxHealth / maxHealth;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
         displayhealth.text = "Health: " + hitPoints.ToString();
+        HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1.0f, 1.0f);
         if (hitPoints <= 0 )
         {
             StartCoroutine(Death());
@@ -39,9 +49,37 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(timeToDie);
         if (playerType == PlayerType.PLAYER) {
             hitPoints = maxHealth;
+            ratio = 1;
             Debug.Log("I am dead");
             Spawn respawn = spawn.GetComponent<Spawn>();
             lives--;
+            if(lives == 3)
+            {
+                heartobject1.SetActive(true);
+                heartobject2.SetActive(true);
+                heartobject3.SetActive(true);
+            }
+            else if (lives == 2)
+            {
+                heartobject1.SetActive(true);
+                heartobject2.SetActive(true);
+                heartobject3.SetActive(false);
+            }
+            else if (lives == 1)
+            {
+                heartobject1.SetActive(true);
+                heartobject2.SetActive(false);
+                heartobject2.SetActive(false);
+            }
+            else if (lives <= 0)
+            {
+                heartobject1.SetActive(false);
+                heartobject2.SetActive(false);
+                heartobject3.SetActive(false);
+                GameOver.SetActive(true);
+                DisableUI.SetActive(false);
+                Time.timeScale = 0f;
+            }
             respawn.Respawn();
         }
 
@@ -52,6 +90,7 @@ public class Health : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
     public int HitPoints
     {
         get { return hitPoints; }
