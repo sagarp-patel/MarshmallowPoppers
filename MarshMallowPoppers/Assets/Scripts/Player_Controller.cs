@@ -98,7 +98,7 @@ public class Player_Controller : MonoBehaviour
         rigidBody.AddForce(Vector2.up * 400.0f);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    IEnumerator OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision has Happened", gameObject);
         Debug.Log(collision.gameObject.tag,gameObject);
@@ -130,5 +130,14 @@ public class Player_Controller : MonoBehaviour
             Health lives = gameObject.GetComponent<Health>();
             lives.lives += 1;
         }
+
+        if (collision.gameObject.tag == "Cloud")
+        {
+            isGrounded = true;
+            yield return new WaitForSeconds(1);
+            Destroy(collision.gameObject);
+            
+        }
+
     }
 }
