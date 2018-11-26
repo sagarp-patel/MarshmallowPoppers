@@ -12,7 +12,10 @@ TagManager:
   - Music
   - HealthPack
   - Lives
+  - KeepObject
   - Toggle
+  - Temp
+  - Slider
   layers:
   - Default
   - TransparentFX

@@ -25,6 +25,6 @@ public class Settings : MonoBehaviour
     }
     public void Slider_Volume()
     {
-        Current_Audio.volume = Adjust_Volume.value;
+        Current_Audio.GetComponentInChildren<AudioSource>().volume = Adjust_Volume.GetComponentInChildren<Slider>().value;
     }
 }
