@@ -140,7 +140,10 @@ public class Health : MonoBehaviour
             StartCoroutine(Death());
         }
 
-       
+        if (collision.gameObject.tag == "HealthPack") {
+            hitPoints += 10;
+            Destroy(collision.gameObject);
+        }
 
     }
 }
