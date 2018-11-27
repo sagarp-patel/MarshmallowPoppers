@@ -7,20 +7,15 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public GameObject Pause_Menu_UI;
+    public GameObject PauseMenuUI;
     public GameObject OptionsMenuUI;
     public GameObject DisablePlayer;
     public GameObject DisableTimerPanel;
+    public GameObject DisableCursorAim;
 
     void Start()
     {
-        //Pause_Menu_UI.SetActive(GameIsPaused);
-        //Resume();
-        /*if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            GameIsPaused = false;
-            Pause();
-        }*/
+
     }
 
     void Update()
@@ -41,9 +36,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Pause_Menu_UI.SetActive(false);
+        PauseMenuUI.SetActive(false);
         DisableTimerPanel.SetActive(true);
         OptionsMenuUI.SetActive(false);
+        DisableCursorAim.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
@@ -52,17 +48,18 @@ public class PauseMenu : MonoBehaviour
     public void QuitOptions()
     {
         OptionsMenuUI.SetActive(false);
-        Pause_Menu_UI.SetActive(true);
+        PauseMenuUI.SetActive(true);
         GameIsPaused = false;
     }
 
     public void Pause()
     {
-        Pause_Menu_UI.SetActive(true);
+        PauseMenuUI.SetActive(true);
         DisableTimerPanel.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
         DisablePlayer.GetComponent<Player_Controller>().enabled = false;
+        DisableCursorAim.GetComponent<CursorAim>().enabled = false;
     }
     
     public void ResumeButton()
@@ -76,18 +73,19 @@ public class PauseMenu : MonoBehaviour
     public void OptionsButton()
     {
         OptionsMenuUI.SetActive(true);
-        Pause_Menu_UI.SetActive(false);
+        PauseMenuUI.SetActive(false);
     }
 
-    public void RestartButton()
+    public void RestartButton(string SceneName)
     {
-        Pause_Menu_UI.SetActive(false);
+        PauseMenuUI.SetActive(false);
         DisableTimerPanel.SetActive(true);
         OptionsMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        SceneManager.LoadScene("intro_scene");
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
+        DisableCursorAim.GetComponent<CursorAim>().enabled = true;
+        SceneManager.LoadScene(SceneName);
     }
 
     public void MainMenuButton(string MenuScene)

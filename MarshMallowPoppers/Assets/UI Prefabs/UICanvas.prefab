@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 224857301051499562}
   - component: {fileID: 222287846891091428}
   - component: {fileID: 114452647053666100}
+  - component: {fileID: 114535009424414150}
   m_Layer: 0
   m_Name: TimerPanel
   m_TagString: Untagged
@@ -389,7 +390,7 @@ GameObject:
   - component: {fileID: 114984823226093638}
   - component: {fileID: 114470640869199094}
   m_Layer: 5
-  m_Name: ExitOptions_Button
+  m_Name: ExitOptionsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,7 +675,6 @@ GameObject:
   - component: {fileID: 224669630716413822}
   - component: {fileID: 222732098645801170}
   - component: {fileID: 114413728343292942}
-  - component: {fileID: 114867287473282556}
   m_Layer: 0
   m_Name: GameplayUIPanel
   m_TagString: Untagged
@@ -919,6 +919,7 @@ MonoBehaviour:
   QuitButton: {fileID: 1625132180021814}
   DisableScript: {fileID: 1505829765426502}
   DisablePlayer: {fileID: 0}
+  DisableCursorAim: {fileID: 0}
 --- !u!114 &114010079046085822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -930,10 +931,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2f156bbc4159c478b0face4bed54e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 1272380982660834}
+  PauseMenuUI: {fileID: 1272380982660834}
   OptionsMenuUI: {fileID: 1129338702390702}
   DisablePlayer: {fileID: 0}
   DisableTimerPanel: {fileID: 1886376672837044}
+  DisableCursorAim: {fileID: 0}
 --- !u!114 &114026066491728308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1053,10 +1055,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2f156bbc4159c478b0face4bed54e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 1272380982660834}
+  PauseMenuUI: {fileID: 1272380982660834}
   OptionsMenuUI: {fileID: 1129338702390702}
   DisablePlayer: {fileID: 0}
   DisableTimerPanel: {fileID: 0}
+  DisableCursorAim: {fileID: 0}
 --- !u!114 &114094744822702980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1342,6 +1345,7 @@ MonoBehaviour:
   QuitButton: {fileID: 1625132180021814}
   DisableScript: {fileID: 1505829765426502}
   DisablePlayer: {fileID: 0}
+  DisableCursorAim: {fileID: 0}
 --- !u!114 &114270515558823272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1413,10 +1417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2f156bbc4159c478b0face4bed54e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 1272380982660834}
+  PauseMenuUI: {fileID: 1272380982660834}
   OptionsMenuUI: {fileID: 1129338702390702}
   DisablePlayer: {fileID: 0}
   DisableTimerPanel: {fileID: 1886376672837044}
+  DisableCursorAim: {fileID: 0}
 --- !u!114 &114359217873873360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1458,13 +1463,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114265573848900184}
         m_MethodName: Restart
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Intro_Scene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1627,10 +1632,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2f156bbc4159c478b0face4bed54e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 1272380982660834}
+  PauseMenuUI: {fileID: 1272380982660834}
   OptionsMenuUI: {fileID: 1129338702390702}
   DisablePlayer: {fileID: 0}
   DisableTimerPanel: {fileID: 1886376672837044}
+  DisableCursorAim: {fileID: 0}
 --- !u!114 &114468727025857126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1657,10 +1663,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2f156bbc4159c478b0face4bed54e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 1272380982660834}
+  PauseMenuUI: {fileID: 1272380982660834}
   OptionsMenuUI: {fileID: 1129338702390702}
   DisablePlayer: {fileID: 0}
   DisableTimerPanel: {fileID: 1886376672837044}
+  DisableCursorAim: {fileID: 0}
 --- !u!114 &114495771613137604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1672,10 +1679,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2f156bbc4159c478b0face4bed54e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause_Menu_UI: {fileID: 0}
+  PauseMenuUI: {fileID: 0}
   OptionsMenuUI: {fileID: 0}
   DisablePlayer: {fileID: 0}
   DisableTimerPanel: {fileID: 0}
+  DisableCursorAim: {fileID: 0}
 --- !u!114 &114500753292308486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1744,13 +1752,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114575774644670804}
         m_MethodName: Quit
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: menu_scene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1788,6 +1796,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Music Enabled
+--- !u!114 &114535009424414150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305755897412162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c79ab00c3a341244db411c60de8773ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTime: 0
+  startingTime: 1
+  countdownText: {fileID: 114877295906295414}
+  GameOver: {fileID: 1086857443567494}
+  DisableUI: {fileID: 1886376672837044}
 --- !u!114 &114547677722135024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1938,6 +1962,7 @@ MonoBehaviour:
   QuitButton: {fileID: 1625132180021814}
   DisableScript: {fileID: 1505829765426502}
   DisablePlayer: {fileID: 0}
+  DisableCursorAim: {fileID: 0}
 --- !u!114 &114576311405580966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2328,13 +2353,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114010079046085822}
         m_MethodName: RestartButton
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Intro_Scene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2428,22 +2453,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Options
---- !u!114 &114867287473282556
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1886376672837044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c79ab00c3a341244db411c60de8773ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTime: 0
-  startingTime: 100
-  countdownText: {fileID: 114877295906295414}
-  GameOver: {fileID: 1086857443567494}
-  DisableUI: {fileID: 1886376672837044}
 --- !u!114 &114871344009082084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2617,8 +2626,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0, g: 1, b: 1, a: 0.27450982}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 0.27450982}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3063,8 +3072,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224621935253001792}
-  - {fileID: 224518236956949490}
   - {fileID: 224193870921318676}
+  - {fileID: 224518236956949490}
   - {fileID: 224459695842066804}
   - {fileID: 224669630716413822}
   m_Father: {fileID: 0}
@@ -3221,7 +3230,7 @@ RectTransform:
   - {fileID: 224303342069879374}
   - {fileID: 224146897904215830}
   m_Father: {fileID: 224011772575658226}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3327,18 +3336,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1328425847270698}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224196775349852818}
-  m_Father: {fileID: 224625513737387604}
-  m_RootOrder: 5
+  m_Father: {fileID: 224669630716413822}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -744.30005, y: 546.01}
-  m_SizeDelta: {x: -94, y: 7.49}
+  m_AnchoredPosition: {x: -388.6001, y: 266.25977}
+  m_SizeDelta: {x: -819.8, y: -566.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224332697189212348
 RectTransform:
@@ -3470,7 +3479,7 @@ RectTransform:
   - {fileID: 224228444424812414}
   - {fileID: 224887711766930904}
   m_Father: {fileID: 224011772575658226}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3564,10 +3573,8 @@ RectTransform:
   - {fileID: 4872879240006876}
   - {fileID: 224406642608319498}
   - {fileID: 224691603706418218}
-  - {fileID: 224306120589128164}
-  - {fileID: 224857301051499562}
   m_Father: {fileID: 224669630716413822}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3621,6 +3628,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 224306120589128164}
+  - {fileID: 224857301051499562}
   - {fileID: 224625513737387604}
   m_Father: {fileID: 224011772575658226}
   m_RootOrder: 4
@@ -3766,18 +3775,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1305755897412162}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224850876040716414}
-  m_Father: {fileID: 224625513737387604}
-  m_RootOrder: 6
+  m_Father: {fileID: 224669630716413822}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -355.9, y: 546.01}
-  m_SizeDelta: {x: -169.15, y: 7.4875}
+  m_AnchoredPosition: {x: -0.19995117, y: 266.25977}
+  m_SizeDelta: {x: -894.94995, y: -566.0125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224887711766930904
 RectTransform:

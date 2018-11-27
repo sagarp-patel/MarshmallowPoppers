@@ -10,26 +10,28 @@ public class GameOverScript : MonoBehaviour
     public GameObject QuitButton;
     public GameObject DisableScript;
     public GameObject DisablePlayer;
+    public GameObject DisableCursorAim;
 
     void Start()
     {
         DisableScript.GetComponent<PauseMenu>().enabled = false;
         DisablePlayer.GetComponent<Player_Controller>().enabled = false;
-    }
+        DisableCursorAim.GetComponent<CursorAim>().enabled = false;
+}
 
-    public void Restart()
+    public void Restart(string SceneName)
     {
         Time.timeScale = 1f;
         DisableScript.GetComponent<PauseMenu>().enabled = true;
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
-        SceneManager.LoadScene("Intro_Scene");
+        SceneManager.LoadScene(SceneName);
     }
 
-    public void Quit()
+    public void Quit(string SceneName)
     {
         Time.timeScale = 1f;
         DisableScript.GetComponent<PauseMenu>().enabled = true;
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
-        SceneManager.LoadScene("menu_scene");
+        SceneManager.LoadScene(SceneName);
     }
 }
