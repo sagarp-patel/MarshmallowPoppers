@@ -43,6 +43,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
+        DisableCursorAim.GetComponent<CursorAim>().enabled = true;
     }
 
     public void QuitOptions()
