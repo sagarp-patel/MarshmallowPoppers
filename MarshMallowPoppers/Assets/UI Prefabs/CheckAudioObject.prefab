@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224332147540327276}
-  - component: {fileID: 114724914690335416}
+  - component: {fileID: 114614318149275854}
   m_Layer: 5
   m_Name: CheckAudioObject
   m_TagString: KeepObject
@@ -27,7 +27,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114724914690335416
+--- !u!114 &114614318149275854
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -210,32 +210,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114724914690335416, guid: 8c016b33e9f957945926dab176bdc1da, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c016b33e9f957945926dab176bdc1da, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &605250072 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1579906180891124, guid: 8c016b33e9f957945926dab176bdc1da,
-    type: 2}
-  m_PrefabInternal: {fileID: 605250071}
---- !u!114 &605250073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 605250072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ea04a8f23fa1ff419b204de8b64a756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ToggleButton: {fileID: 0}
-  SliderVolume: {fileID: 0}
-  AudioObject: {fileID: 0}
-  EnableTemp: {fileID: 0}
-  VolumePreSetting: 0.5
-  CheckAudio: 1
 --- !u!1001 &761375035
 Prefab:
   m_ObjectHideFlags: 0
