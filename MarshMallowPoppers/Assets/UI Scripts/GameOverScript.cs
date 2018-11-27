@@ -13,14 +13,14 @@ public class GameOverScript : MonoBehaviour
 
     void Start()
     {
-        DisableScript.GetComponent<Pause_Menu>().enabled = false;
+        DisableScript.GetComponent<PauseMenu>().enabled = false;
         DisablePlayer.GetComponent<Player_Controller>().enabled = false;
     }
 
     public void Restart()
     {
         Time.timeScale = 1f;
-        DisableScript.GetComponent<Pause_Menu>().enabled = true;
+        DisableScript.GetComponent<PauseMenu>().enabled = true;
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
         SceneManager.LoadScene("Intro_Scene");
     }
@@ -28,7 +28,7 @@ public class GameOverScript : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1f;
-        DisableScript.GetComponent<Pause_Menu>().enabled = true;
+        DisableScript.GetComponent<PauseMenu>().enabled = true;
         DisablePlayer.GetComponent<Player_Controller>().enabled = true;
         SceneManager.LoadScene("menu_scene");
     }
