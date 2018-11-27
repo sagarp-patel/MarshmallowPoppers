@@ -19,6 +19,7 @@ public class CountDownTimer : MonoBehaviour
         GameOver.SetActive(false);
         DisableUI.SetActive(true);
     }
+
     void Count()
     {
         if (currentTime == 0)

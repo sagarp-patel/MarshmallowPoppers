@@ -60,6 +60,12 @@ public class KeepObject : MonoBehaviour
         }
         if (scene.name == "Intro_Scene")
         {
+            GameObject[] ObjectList = GameObject.FindGameObjectsWithTag("KeepObject");
+            if (ObjectList.Length > 1)
+            {
+                Destroy(ObjectList[1].gameObject);
+            }
+            DontDestroyOnLoad(this.gameObject);
             EnableTemp = GameObject.FindGameObjectWithTag("Temp");
             ToggleButton = GameObject.FindGameObjectWithTag("Toggle").GetComponent<Toggle>();
             SliderVolume = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();

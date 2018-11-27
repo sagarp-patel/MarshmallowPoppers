@@ -7,12 +7,22 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
     public int score;
+    public int count;
     public Text displayscore;
+    public GameObject ExitObject;
+    public GameObject ShowMessage;
+    public GameObject ShowNavPoint;
 
     // Use this for initialization
     void Start()
     {
         score = 0;
+        ExitObject = GameObject.FindGameObjectWithTag("Exit");
+        ExitObject.SetActive(false);
+        ShowMessage = GameObject.FindGameObjectWithTag("Message");
+        ShowMessage.SetActive(false);
+        ShowNavPoint = GameObject.FindGameObjectWithTag("Navigate");
+        ShowNavPoint.SetActive(false);
     }
 
     public void UpdateScore()
@@ -26,6 +36,12 @@ public class ScoreSystem : MonoBehaviour
         {
             displayscore.text = "Score: " + score.ToString();
         }
-        Debug.Log("Target Destoyed");
+        if(score == count)
+        {
+            ExitObject.SetActive(true);
+            ShowMessage.SetActive(true);
+            ShowNavPoint.SetActive(true);
+        }
+        //Debug.Log("Target Destoyed");
     }
 }

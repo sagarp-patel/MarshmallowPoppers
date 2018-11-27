@@ -17,6 +17,9 @@ TagManager:
   - Temp
   - Slider
   - Cloud
+  - Exit
+  - Message
+  - Navigate
   layers:
   - Default
   - TransparentFX
