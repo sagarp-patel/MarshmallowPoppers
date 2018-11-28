@@ -354,6 +354,19 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1376310899029746, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677082678702742, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -44551
+      objectReference: {fileID: 0}
+    - target: {fileID: 114272490950757824, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
   m_IsPrefabAsset: 0

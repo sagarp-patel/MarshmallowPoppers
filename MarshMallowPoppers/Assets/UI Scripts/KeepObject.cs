@@ -21,7 +21,7 @@ public class KeepObject : MonoBehaviour
         {
             CheckAudio = true;
         }
-        else
+        else if (ToggleButton.GetComponentInChildren<Toggle>().isOn == false)
         {
             CheckAudio = false;
         }
@@ -35,7 +35,7 @@ public class KeepObject : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "menu_scene")
+        /*if (scene.name == "menu_scene")
         {
             GameObject[] ObjectList = GameObject.FindGameObjectsWithTag("KeepObject");
             if (ObjectList.Length > 1)
@@ -48,6 +48,7 @@ public class KeepObject : MonoBehaviour
             SliderVolume = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
             AudioObject = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
             SliderVolume.GetComponentInChildren<Slider>().value = VolumePreSetting;
+
             if (CheckAudio == true)
             {
                 ToggleButton.GetComponentInChildren<Toggle>().isOn = true;
@@ -67,6 +68,30 @@ public class KeepObject : MonoBehaviour
             }
             DontDestroyOnLoad(this.gameObject);
             EnableTemp = GameObject.FindGameObjectWithTag("Temp");
+            ToggleButton = GameObject.FindGameObjectWithTag("Toggle").GetComponent<Toggle>();
+            SliderVolume = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
+            AudioObject = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
+            SliderVolume.GetComponentInChildren<Slider>().value = VolumePreSetting;
+
+            if (CheckAudio == true)
+            {
+                ToggleButton.GetComponentInChildren<Toggle>().isOn = true;
+            }
+            else
+            {
+                ToggleButton.GetComponentInChildren<Toggle>().isOn = false;
+            }
+            EnableTemp.SetActive(false);
+        }*/
+        GameObject[] ObjectList = GameObject.FindGameObjectsWithTag("KeepObject");
+        EnableTemp = GameObject.FindGameObjectWithTag("Temp");
+        if (EnableTemp == null)
+        {
+            Destroy(ObjectList[1].gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
             ToggleButton = GameObject.FindGameObjectWithTag("Toggle").GetComponent<Toggle>();
             SliderVolume = GameObject.FindGameObjectWithTag("Slider").GetComponent<Slider>();
             AudioObject = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
