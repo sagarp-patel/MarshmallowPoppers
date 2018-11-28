@@ -8,7 +8,9 @@ public class ScoreSystem : MonoBehaviour
 {
     public int score;
     public int count;
+    public int CoinAmount;
     public Text displayscore;
+    public Text displaycoin;
     public GameObject ExitObject;
     public GameObject ShowMessage;
     public GameObject ShowNavPoint;
@@ -43,5 +45,10 @@ public class ScoreSystem : MonoBehaviour
             ShowNavPoint.SetActive(true);
         }
         //Debug.Log("Target Destoyed");
+    }
+    public void UpdateCoin()
+    {
+        CoinAmount += 10;
+        displaycoin.text = CoinAmount.ToString();
     }
 }
