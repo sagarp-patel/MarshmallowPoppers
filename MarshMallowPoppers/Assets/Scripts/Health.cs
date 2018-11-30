@@ -14,11 +14,9 @@ public class Health : MonoBehaviour
     public Type healthType;
     public enum PlayerType { ENEMY, PLAYER};
     public PlayerType playerType;
-    public GameObject heartobject1;
-    public GameObject heartobject2;
-    public GameObject heartobject3;
     public GameObject GameOver;
     public GameObject DisableUI;
+    public Text LivesTextObject;
 
     public Text displayhealth;
     public Image HealthBarImage;
@@ -31,6 +29,10 @@ public class Health : MonoBehaviour
     {
         maxHealth = hitPoints;
         ratio = maxHealth / maxHealth;
+        if(playerType == Health.PlayerType.PLAYER)
+        {
+            LivesTextObject.text = lives.ToString();
+        }
     }
 
     // Update is called once per frame
@@ -53,29 +55,9 @@ public class Health : MonoBehaviour
             Debug.Log("I am dead");
             Spawn respawn = spawn.GetComponent<Spawn>();
             lives--;
-            if(lives == 3)
+            LivesTextObject.text = lives.ToString();
+            if (lives <= 0)
             {
-                heartobject1.SetActive(true);
-                heartobject2.SetActive(true);
-                heartobject3.SetActive(true);
-            }
-            else if (lives == 2)
-            {
-                heartobject1.SetActive(true);
-                heartobject2.SetActive(true);
-                heartobject3.SetActive(false);
-            }
-            else if (lives == 1)
-            {
-                heartobject1.SetActive(true);
-                heartobject2.SetActive(false);
-                heartobject2.SetActive(false);
-            }
-            else if (lives <= 0)
-            {
-                heartobject1.SetActive(false);
-                heartobject2.SetActive(false);
-                heartobject3.SetActive(false);
                 GameOver.SetActive(true);
                 DisableUI.SetActive(false);
                 Time.timeScale = 0f;

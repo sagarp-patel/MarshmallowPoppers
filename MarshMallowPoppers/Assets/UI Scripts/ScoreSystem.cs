@@ -29,13 +29,13 @@ public class ScoreSystem : MonoBehaviour
     public void UpdateScore()
     {
         score = score  + 1;
-        if(score > 9999999)
+        if(score > 99999)
         {
-            displayscore.text = "Score: ∞";
+            displayscore.text = "∞";
         }
         else
         {
-            displayscore.text = "Score: " + score.ToString();
+            displayscore.text = score.ToString();
         }
         if(score == count)
         {
@@ -48,6 +48,14 @@ public class ScoreSystem : MonoBehaviour
     public void UpdateCoin()
     {
         CoinAmount += 10;
-        displaycoin.text = CoinAmount.ToString();
+        if(CoinAmount > 9999)
+        {
+            CoinAmount = 9999;
+            displaycoin.text = CoinAmount.ToString();
+        }
+        else
+        {
+            displaycoin.text = CoinAmount.ToString();
+        }
     }
 }
