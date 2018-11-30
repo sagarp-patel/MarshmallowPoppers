@@ -5,11 +5,17 @@ using UnityEngine;
 public class Weapon_Controller : MonoBehaviour {
 
     public int selectedWeapon;
+    public GameObject BackPanel1;
+    public GameObject BackPanel2;
+    public GameObject BackPanel3;
 
     // Use this for initialization
     void Start()
     {
         selectedWeapon = 0;
+        BackPanel1.SetActive(true);
+        BackPanel2.SetActive(false);
+        BackPanel3.SetActive(false);
         SelectWeapon();
     }
 
@@ -23,6 +29,24 @@ public class Weapon_Controller : MonoBehaviour {
                 selectedWeapon = 0;
             else
                 selectedWeapon++;
+            if(selectedWeapon == 0)
+            {
+                BackPanel1.SetActive(true);
+                BackPanel2.SetActive(false);
+                BackPanel3.SetActive(false);
+            }
+            else if (selectedWeapon == 1)
+            {
+                BackPanel1.SetActive(false);
+                BackPanel2.SetActive(true);
+                BackPanel3.SetActive(false);
+            }
+            else if (selectedWeapon == 2)
+            {
+                BackPanel1.SetActive(false);
+                BackPanel2.SetActive(false);
+                BackPanel3.SetActive(true);
+            }
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0f)
@@ -31,6 +55,24 @@ public class Weapon_Controller : MonoBehaviour {
                 selectedWeapon = transform.childCount - 1;
             else
                 selectedWeapon--;
+            if (selectedWeapon == 0)
+            {
+                BackPanel1.SetActive(true);
+                BackPanel2.SetActive(false);
+                BackPanel3.SetActive(false);
+            }
+            else if (selectedWeapon == 1)
+            {
+                BackPanel1.SetActive(false);
+                BackPanel2.SetActive(true);
+                BackPanel3.SetActive(false);
+            }
+            else if (selectedWeapon == 2)
+            {
+                BackPanel1.SetActive(false);
+                BackPanel2.SetActive(false);
+                BackPanel3.SetActive(true);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -39,6 +81,24 @@ public class Weapon_Controller : MonoBehaviour {
                 selectedWeapon = 0;
             else
                 selectedWeapon++;
+            if (selectedWeapon == 0)
+            {
+                BackPanel1.SetActive(true);
+                BackPanel2.SetActive(false);
+                BackPanel3.SetActive(false);
+            }
+            else if (selectedWeapon == 1)
+            {
+                BackPanel1.SetActive(false);
+                BackPanel2.SetActive(true);
+                BackPanel3.SetActive(false);
+            }
+            else if (selectedWeapon == 2)
+            {
+                BackPanel1.SetActive(false);
+                BackPanel2.SetActive(false);
+                BackPanel3.SetActive(true);
+            }
         }
 
         if (selectedWeapon != previousSelectedWeapon)
