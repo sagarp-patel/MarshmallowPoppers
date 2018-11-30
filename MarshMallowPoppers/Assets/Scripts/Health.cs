@@ -43,6 +43,11 @@ public class Health : MonoBehaviour
         {
             StartCoroutine(Death());
         }
+
+        if (playerType == PlayerType.PLAYER)
+        {
+            LivesTextObject.text = lives.ToString();
+        }
     }
 
     IEnumerator Death()
@@ -83,6 +88,11 @@ public class Health : MonoBehaviour
                 hitPoints = maxHealth;
             }
         }
+    }
+
+    public void IncreaseLives()
+    {
+
     }
 
     public GameObject Spawn
