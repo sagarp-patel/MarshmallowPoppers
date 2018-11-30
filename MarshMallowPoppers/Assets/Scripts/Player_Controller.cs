@@ -21,13 +21,12 @@ public class Player_Controller : MonoBehaviour
     public Animator animator;
     private float movement_speed; //Created for Animator
 
-
-    private AudioSource source_sound;
-    public AudioClip projectile_fire;
+    public AudioSource JumpSound;
 
     float fallZone = -10f;
     Vector3 InitPos;  //initial position of player
     // Use this for initialization
+
     void Awake ()
     {
         InitPos = transform.position;
@@ -77,6 +76,7 @@ public class Player_Controller : MonoBehaviour
             {
                 Debug.Log("SpaceBar is pressed", gameObject);
                 Jump();
+                JumpSound.Play();
                 //Instantiate(projectile, transform.position, Quaternion.identity);
             }
 
@@ -87,7 +87,6 @@ public class Player_Controller : MonoBehaviour
                 //Instantiate(projectile, transform.position, Quaternion.identity);
                 weapon = GetComponentInChildren<Weapon>();
                 Attack();
-                //source_sound.PlayOneShot(projectile_fire);
             }
         }
     }

@@ -383,6 +383,16 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 114219201728236058, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_Text
+      value: "MarshMallow Poppers Crew\n\nProgramming Team:\n\tSager Patel - Lead
+        Director\n\tJohnny Gonzales - Gameplay Designer and Sound Effects\n\tKajal
+        Rama - Gameplay Designer\n\tChad McAdams - UI Designer\n\tNicholas Perez -
+        UI Designer and Item Sprite Designer\n\nDigital Artist:\n\tElizabeth Sanchez
+        - Main Character Sprite Designer\n\nMusician:\n\tFerdinand Torres - Game SoundTracks
+        and Sound Effects"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
   m_IsPrefabAsset: 0

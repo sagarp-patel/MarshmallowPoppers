@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LifePickUp : MonoBehaviour
 {
+    public AudioSource LifePickUpSound;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -11,6 +12,7 @@ public class LifePickUp : MonoBehaviour
             GameObject begin = GameObject.Find("Player");
             Health callfunction = (Health)begin.GetComponent(typeof(Health));
             callfunction.IncreaseLives();
+            LifePickUpSound.Play();
             Destroy(this.gameObject);
         }
     }

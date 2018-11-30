@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     private WaitForSeconds fireRate;
     [SerializeField] [Range(1.0f, 600.0f)] private float rateOfFire;
     private bool allowFire;
+    public AudioSource Projectile_Fire;
 
     // Use this for initialization
     //MarshMallow Weapon
@@ -67,6 +68,7 @@ public class Weapon : MonoBehaviour
         Debug.Log("Reached the Fire Function");
         if (allowFire)
         {
+            Projectile_Fire.Play();
             Debug.Log("Firing a Projectile");
             allowFire = false;
             Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
