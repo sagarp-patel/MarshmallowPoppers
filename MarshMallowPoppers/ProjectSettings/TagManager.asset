@@ -21,6 +21,8 @@ TagManager:
   - Message
   - Navigate
   - Coin
+  - SoundFX
+  - ToggleFX
   layers:
   - Default
   - TransparentFX

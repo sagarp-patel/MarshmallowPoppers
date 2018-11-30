@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollectCoin : MonoBehaviour {
 
+    public AudioSource CoinSound;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -25,7 +27,8 @@ public class CollectCoin : MonoBehaviour {
         {
             GameObject begin = GameObject.Find("Player");
             ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
-            callfunction.UpdateCoin();
+            callfunction.FoundCoin();
+            CoinSound.Play();
             Destroy(this.gameObject);
         }
     }

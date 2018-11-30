@@ -11,6 +11,7 @@ public class CountDownTimer : MonoBehaviour
     public Text countdownText;
     public GameObject GameOver;
     public GameObject DisableUI;
+    public AudioSource GameOverSound;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class CountDownTimer : MonoBehaviour
         {
             GameOver.SetActive(true);
             DisableUI.SetActive(false);
+            GameOverSound.Play();
             Time.timeScale = 0f;
         }
         else

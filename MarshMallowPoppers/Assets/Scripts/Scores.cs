@@ -35,7 +35,7 @@ public class Scores : MonoBehaviour {
         {
             GameObject begin = GameObject.Find("Player");
             ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
-            callfunction.UpdateCoin();
+            callfunction.FoundCoin();
         }
     }
 }

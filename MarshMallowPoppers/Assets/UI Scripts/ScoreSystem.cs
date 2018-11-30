@@ -40,7 +40,7 @@ public class ScoreSystem : MonoBehaviour
         //Debug.Log("Target Destoyed");
     }
 
-    public void UpdateCoin()
+    public void FoundCoin()
     {
         CoinAmount += 10;
         if(CoinAmount > 9999)
@@ -60,7 +60,12 @@ public class ScoreSystem : MonoBehaviour
         }
     }
 
-    public void UpdateGrandCoin()
+    public void DoorSound()
+    {
+
+    }
+
+    public void FoundGrandCoin()
     {
         CoinAmount = 9999;
         displaycoin.text = "9999";

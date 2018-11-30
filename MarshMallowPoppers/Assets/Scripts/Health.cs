@@ -24,6 +24,10 @@ public class Health : MonoBehaviour
 
     public GameObject particle;
 
+    public AudioSource Explosion;
+    public AudioSource GameOverSound;
+    public AudioSource PlayerDeathSound;
+
     //Use this for initialization
     void Start()
     {
@@ -60,10 +64,12 @@ public class Health : MonoBehaviour
             Spawn respawn = spawn.GetComponent<Spawn>();
             lives--;
             LivesTextObject.text = lives.ToString();
+            PlayerDeathSound.Play();
             if (lives <= 0)
             {
                 GameOver.SetActive(true);
                 DisableUI.SetActive(false);
+                GameOverSound.Play();
                 Time.timeScale = 0f;
             }
             respawn.Respawn();
@@ -138,11 +144,11 @@ public class Health : MonoBehaviour
                     GameObject begin = GameObject.Find("Player");
                     ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
                     callfunction.UpdateScore();
+                    Explosion.Play();
                 }
             }
             if (playerType == PlayerType.PLAYER && otherProjectile.playerType == Projectile.PlayerType.PLAYER) {
                 Debug.Log("Player Bullet is colliding with Player");
-                
             }
             Destroy(otherProjectile.gameObject);
         }
@@ -166,6 +172,7 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Player" && playerType == Health.PlayerType.ENEMY) {
             hitPoints = 0;
             StartCoroutine(Death());
+            Explosion.Play();
         }
     }
 }
