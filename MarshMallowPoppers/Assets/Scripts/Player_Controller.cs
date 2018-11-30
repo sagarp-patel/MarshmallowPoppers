@@ -15,6 +15,7 @@ public class Player_Controller : MonoBehaviour
     private bool isGrounded;
     public bool allowFire;
     public Projectile projectile;
+    public Projectile secondary;
     [SerializeField] [Range(0, 50)] private float speed = 0;
     private Weapon weapon;
     public Animator animator;
