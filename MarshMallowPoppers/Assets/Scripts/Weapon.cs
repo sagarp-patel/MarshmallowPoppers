@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour {
+public class Weapon : MonoBehaviour
+{
     public Projectile projectile;
     public enum PlayerType { ENEMY, PLAYER };
     public PlayerType playerType;
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private WaitForSeconds fireRate;
+    [SerializeField] [Range(1.0f, 600.0f)] private float rateOfFire;
+    private bool allowFire;
 
+    // Use this for initialization
+    //MarshMallow Weapon
+
+    private void Awake()
+    {
+        fireRate = new WaitForSeconds(60.0f / rateOfFire);
+        allowFire = true;
+    }
+    /*
     public void Fire() {
 
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -29,6 +33,7 @@ public class Weapon : MonoBehaviour {
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 Instantiate(projectile, spawnPos, rotation);
+                
             } else if (transform.position.y - 1.0f > mousePosition.y) {
                 Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y - .70f);
                 Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -53,4 +58,26 @@ public class Weapon : MonoBehaviour {
         }
         
     }
+    */
+    public IEnumerator Fire()
+    {
+        float rad = Mathf.Atan2(Input.mousePosition.y - transform.position.y, Input.mousePosition.x - transform.position.x);
+        float angle_deg = (180 / Mathf.PI) * rad;
+        this.transform.rotation = Quaternion.Euler(0, 0, angle_deg);
+        Debug.Log("Reached the Fire Function");
+        if (allowFire)
+        {
+            Debug.Log("Firing a Projectile");
+            allowFire = false;
+            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Instantiate(projectile, gameObject.transform.position, rotation);
+            Debug.Log("Fired Projectile now waiting for next one");
+            yield return fireRate;
+            allowFire = true;
+            Debug.Log("Allow Fire now set to true");
+        }
+    }
 }
+

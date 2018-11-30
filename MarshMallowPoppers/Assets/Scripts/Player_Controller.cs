@@ -88,7 +88,7 @@ public class Player_Controller : MonoBehaviour
 
         //Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
 
-        weapon.Fire();
+        StartCoroutine(weapon.Fire());
     }
 
     void Jump()
