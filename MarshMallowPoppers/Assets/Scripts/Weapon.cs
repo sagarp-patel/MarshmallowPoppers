@@ -5,9 +5,6 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Projectile projectile;
-    public Projectile primary;
-    public Projectile secondary;
-    public Projectile teritary;
     public enum PlayerType { ENEMY, PLAYER };
     public PlayerType playerType;
     private WaitForSeconds fireRate;

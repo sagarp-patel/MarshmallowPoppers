@@ -15331,6 +15331,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1219619264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1219619265}
+  - component: {fileID: 1219619266}
+  m_Layer: 0
+  m_Name: Peppermint_Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1219619265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1219619264}
+  m_LocalRotation: {x: -0, y: -0, z: 0.19456963, w: 0.9808888}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.0875, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1866599447}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.439001}
+--- !u!114 &1219619266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1219619264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ee786fa1ef6af49ac99d7f2c2bb6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 114984913988222358, guid: d041c76826c5a594aa68988f74ed0088,
+    type: 2}
+  playerType: 1
+  rateOfFire: 600
 --- !u!1 &1223435629
 GameObject:
   m_ObjectHideFlags: 0
@@ -17520,6 +17564,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1436767298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436767299}
+  - component: {fileID: 1436767300}
+  m_Layer: 0
+  m_Name: Chocolate_Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1436767299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436767298}
+  m_LocalRotation: {x: -0, y: -0, z: 0.19456963, w: 0.9808888}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.0875, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1866599447}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.439001}
+--- !u!114 &1436767300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436767298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ee786fa1ef6af49ac99d7f2c2bb6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 114837358952910622, guid: 6feabeb7d7cbebb43948c065f6db41e1,
+    type: 2}
+  playerType: 1
+  rateOfFire: 100
 --- !u!1 &1440716060
 GameObject:
   m_ObjectHideFlags: 0
@@ -19679,7 +19767,7 @@ GameObject:
   - component: {fileID: 1675930230}
   - component: {fileID: 1675930231}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: Marshmallow_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19692,10 +19780,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1675930229}
   m_LocalRotation: {x: -0, y: -0, z: 0.19456963, w: 0.9808888}
-  m_LocalPosition: {x: -0.059999924, y: 0.5500001, z: 3.0783548}
-  m_LocalScale: {x: 0.5, y: 0.54375, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.0875, z: 1}
   m_Children: []
-  m_Father: {fileID: 168286550}
+  m_Father: {fileID: 1866599447}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.439001}
 --- !u!114 &1675930231
@@ -19709,14 +19797,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee786fa1ef6af49ac99d7f2c2bb6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 114984913988222358, guid: d041c76826c5a594aa68988f74ed0088,
+  projectile: {fileID: 114945570305697038, guid: 522f756dbca4dc4489eee2b538c4bc83,
     type: 2}
-  primary: {fileID: 114945570305697038, guid: 522f756dbca4dc4489eee2b538c4bc83, type: 2}
-  secondary: {fileID: 114837358952910622, guid: 6feabeb7d7cbebb43948c065f6db41e1,
-    type: 2}
-  teritary: {fileID: 114984913988222358, guid: d041c76826c5a594aa68988f74ed0088, type: 2}
   playerType: 1
-  rateOfFire: 600
+  rateOfFire: 300
 --- !u!1 &1679155683
 GameObject:
   m_ObjectHideFlags: 0
@@ -21743,6 +21827,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1866599446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1866599447}
+  - component: {fileID: 1866599448}
+  m_Layer: 0
+  m_Name: WeaponController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1866599447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866599446}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.059999924, y: 0.5500001, z: 3.0783548}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children:
+  - {fileID: 1675930230}
+  - {fileID: 1436767299}
+  - {fileID: 1219619265}
+  m_Father: {fileID: 168286550}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1866599448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866599446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0cc3bbdb2715549a766a0c2d1281f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedWeapon: 0
 --- !u!1001 &1875296340
 Prefab:
   m_ObjectHideFlags: 0

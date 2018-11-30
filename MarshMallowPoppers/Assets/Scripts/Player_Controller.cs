@@ -24,7 +24,7 @@ public class Player_Controller : MonoBehaviour
     float fallZone = -10f;
     Vector3 InitPos;  //initial position of player
     // Use this for initialization
-    void Start ()
+    void Awake ()
     {
         InitPos = transform.position;
         rigidBody = GetComponent<Rigidbody2D>();
@@ -79,6 +79,7 @@ public class Player_Controller : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 //Instantiate(projectile, transform.position, Quaternion.identity);
+                weapon = GetComponentInChildren<Weapon>();
                 Attack();
             }
         }
