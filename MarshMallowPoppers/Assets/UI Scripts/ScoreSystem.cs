@@ -37,14 +37,9 @@ public class ScoreSystem : MonoBehaviour
         {
             displayscore.text = score.ToString();
         }
-        if(score == count)
-        {
-            ExitObject.SetActive(true);
-            ShowMessage.SetActive(true);
-            ShowNavPoint.SetActive(true);
-        }
         //Debug.Log("Target Destoyed");
     }
+
     public void UpdateCoin()
     {
         CoinAmount += 10;
@@ -57,5 +52,20 @@ public class ScoreSystem : MonoBehaviour
         {
             displaycoin.text = CoinAmount.ToString();
         }
+        if (CoinAmount >= count)
+        {
+            ExitObject.SetActive(true);
+            ShowMessage.SetActive(true);
+            ShowNavPoint.SetActive(true);
+        }
+    }
+
+    public void UpdateGrandCoin()
+    {
+        CoinAmount = 9999;
+        displaycoin.text = "9999";
+        ExitObject.SetActive(true);
+        ShowMessage.SetActive(true);
+        ShowNavPoint.SetActive(true);
     }
 }

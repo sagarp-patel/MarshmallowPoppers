@@ -2,30 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectCoin : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    void OnDestroy()
-    {
-        transform.DetachChildren();
-    }
+public class RedCoin : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             GameObject begin = GameObject.Find("Player");
             ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
-            callfunction.UpdateCoin();
+            callfunction.UpdateGrandCoin();
             Destroy(this.gameObject);
         }
     }

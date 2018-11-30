@@ -437,7 +437,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &49176622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -447,7 +446,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1393,7 +1392,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1420,7 +1419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!114 &127067092 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114134447614100950, guid: b9280754cac932c4ebddcf8d005cbf88,
@@ -1443,7 +1441,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &127552037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1453,7 +1450,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2093,7 +2090,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2120,7 +2117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!1 &202332492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,7 +2411,7 @@ Prefab:
       value: Coins (12)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &272892029
@@ -2555,7 +2551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &285455683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2565,7 +2560,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3776,7 +3771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &455007094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3786,7 +3780,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4696,7 +4690,7 @@ Prefab:
       value: Coins (4)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &568123733
@@ -4790,7 +4784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &571080657
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4800,7 +4793,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10109,7 +10102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &682261521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10119,7 +10111,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10998,7 +10990,7 @@ Prefab:
       value: Coins (10)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &743631001 stripped
@@ -11216,7 +11208,7 @@ Prefab:
       value: Coins (6)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &793737118 stripped
@@ -11235,7 +11227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &793737120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11245,7 +11236,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11321,7 +11312,7 @@ Prefab:
       value: Coins (7)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &824036824
@@ -12010,7 +12001,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &869373978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12020,7 +12010,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -16621,7 +16611,7 @@ Prefab:
       value: Coins (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1400840383
@@ -16785,7 +16775,6 @@ GameObject:
   - component: {fileID: 1404352313}
   - component: {fileID: 1404352316}
   - component: {fileID: 1404352315}
-  - component: {fileID: 1404352321}
   - component: {fileID: 1404352320}
   - component: {fileID: 1404352317}
   - component: {fileID: 1404352318}
@@ -16975,24 +16964,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  count: 2
+  count: 50
   CoinAmount: 0
   displayscore: {fileID: 2021050633}
   displaycoin: {fileID: 884537704}
   ExitObject: {fileID: 956699694}
   ShowMessage: {fileID: 618537978}
   ShowNavPoint: {fileID: 309993906}
---- !u!114 &1404352321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1404352312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a31861704d482d14db65f5069af69bd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1420165151
 GameObject:
   m_ObjectHideFlags: 0
@@ -17773,7 +17751,7 @@ Prefab:
       value: Coins (8)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1514000125
@@ -18528,7 +18506,7 @@ Prefab:
       value: Coins (3)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1582201834
@@ -20170,7 +20148,7 @@ Prefab:
       value: 0.8392157
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1728323808
@@ -20598,7 +20576,7 @@ Prefab:
       value: Coins (2)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1761184166
@@ -20928,7 +20906,7 @@ Prefab:
       value: Coins (9)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1786783547 stripped
@@ -20947,7 +20925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &1786783549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20957,7 +20934,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -22386,13 +22363,13 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
+    - {fileID: 61427744774782210, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1943683218
@@ -25664,7 +25641,7 @@ Prefab:
       value: Coins (5)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2005766788
@@ -26076,7 +26053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &2052190631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26086,7 +26062,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -30932,7 +30908,7 @@ Prefab:
       value: Coins (11)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 135325870399405124, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9703c778fc308d045b85adeda034bb59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &2078755668
@@ -31133,7 +31109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &2091582685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31143,7 +31118,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -31172,10 +31147,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095709643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7804b9532286faa48a78a4fe45094e49, type: 3}
+  m_Script: {fileID: 11500000, guid: 283dd1fed53de3e448b3fd2bc1c3348c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 1404352318}
 --- !u!61 &2095709645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31185,7 +31159,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
