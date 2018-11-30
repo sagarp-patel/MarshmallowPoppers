@@ -24,7 +24,6 @@ public class CountDownTimer : MonoBehaviour
     {
         if (currentTime == 0)
         {
-            //currentTime = startingTime;
             GameOver.SetActive(true);
             DisableUI.SetActive(false);
             Time.timeScale = 0f;
