@@ -4,15 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ExitPoint : MonoBehaviour {
-
-    public Collider2D coll;
-    public Collision2D collision;
     public string newGameLevel;
 
     //Check if the isTrigger option on th Collider2D is set to true or false
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(newGameLevel);
         }

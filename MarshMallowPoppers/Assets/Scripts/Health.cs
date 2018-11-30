@@ -102,6 +102,18 @@ public class Health : MonoBehaviour
     public void IncreaseHealth()
     {
         hitPoints += 10;
+        if (hitPoints > maxHealth)
+        {
+            ratio = 1;
+            displayhealth.text = "Health: " + hitPoints.ToString();
+            HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1.0f, 1.0f);
+        }
+        else
+        {
+            ratio = hitPoints / maxHealth;
+            displayhealth.text = "Health: " + hitPoints.ToString();
+            HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1.0f, 1.0f);
+        }
     }
 
     public GameObject Spawn
@@ -154,23 +166,6 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Player" && playerType == Health.PlayerType.ENEMY) {
             hitPoints = 0;
             StartCoroutine(Death());
-        }
-
-        if (collision.gameObject.tag == "HealthPack" && playerType == PlayerType.PLAYER) {
-            hitPoints += 10;
-            Destroy(collision.gameObject);
-            if (HitPoints > maxHealth)
-            {
-                ratio = 1;
-                displayhealth.text = "Health: " + hitPoints.ToString();
-                HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1.0f, 1.0f);
-            }
-            else
-            {
-                ratio = hitPoints / maxHealth;
-                displayhealth.text = "Health: " + hitPoints.ToString();
-                HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1.0f, 1.0f);
-            }
         }
     }
 }
