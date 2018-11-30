@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int hitPoints;
+    public float hitPoints;
     public int lives;
     public float timeToDie;
     public GameObject spawn;
-    private int maxHealth;
+    private float maxHealth;
     public enum Type { CHOCOLATE, MARSHMALLOW, PEPPERMINT};
     public Type healthType;
     public enum PlayerType { ENEMY, PLAYER};
@@ -28,18 +28,17 @@ public class Health : MonoBehaviour
     void Start()
     {
         maxHealth = hitPoints;
-        ratio = maxHealth / maxHealth;
-        if(playerType == Health.PlayerType.PLAYER)
+        if(playerType == PlayerType.PLAYER)
         {
+            ratio = 1;
             LivesTextObject.text = lives.ToString();
+            HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1, 1);
         }
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        displayhealth.text = "Health: " + hitPoints.ToString();
-        HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1.0f, 1.0f);
         if (hitPoints <= 0 )
         {
             StartCoroutine(Death());
@@ -73,7 +72,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    public int HitPoints
+    public float HitPoints
     {
         get { return hitPoints; }
         set
@@ -117,6 +116,13 @@ public class Health : MonoBehaviour
             Destroy(otherProjectile.gameObject);
         }
 
+        if (playerType == PlayerType.PLAYER)
+        {
+            ratio = hitPoints / maxHealth;
+            displayhealth.text = "Health: " + hitPoints.ToString();
+            HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1.0f, 1.0f);
+        }
+
         if (collision.gameObject.tag == "Player" && playerType == Health.PlayerType.ENEMY) {
             hitPoints = 0;
             StartCoroutine(Death());
@@ -126,6 +132,5 @@ public class Health : MonoBehaviour
             hitPoints += 10;
             Destroy(collision.gameObject);
         }
-
     }
 }

@@ -120,7 +120,7 @@ public class Player_Controller : MonoBehaviour
             Health hitPoints = gameObject.GetComponent<Health>();
             Health ratio = gameObject.GetComponent<Health>();
             hitPoints.hitPoints -= 10;
-            ratio.ratio -= 0.10f;
+            //ratio.ratio -= 0.10f;
             /*if (ratio.ratio <= 0.0f)
             {
                 ratio.ratio = 1;

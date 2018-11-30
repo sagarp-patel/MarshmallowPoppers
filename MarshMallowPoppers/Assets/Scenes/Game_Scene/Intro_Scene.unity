@@ -3832,6 +3832,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114465209911539280, guid: a128f6adf18f55a47b7ad0144ad58a7c,
+        type: 2}
+      propertyPath: PlayerPickUp
+      value: 
+      objectReference: {fileID: 1404352318}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a128f6adf18f55a47b7ad0144ad58a7c, type: 2}
   m_IsPrefabAsset: 0
@@ -4673,7 +4678,32 @@ Prefab:
     - target: {fileID: 224179604400407252, guid: b9280754cac932c4ebddcf8d005cbf88,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -129.69998
+      value: -129.7002
+      objectReference: {fileID: 0}
+    - target: {fileID: 224104049119232598, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 466.19043
+      objectReference: {fileID: 0}
+    - target: {fileID: 224104049119232598, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 266.25977
+      objectReference: {fileID: 0}
+    - target: {fileID: 224179604400407252, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -39.299805
+      objectReference: {fileID: 0}
+    - target: {fileID: 224306120589128164, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 331.4004
+      objectReference: {fileID: 0}
+    - target: {fileID: 224306120589128164, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 266.25977
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
