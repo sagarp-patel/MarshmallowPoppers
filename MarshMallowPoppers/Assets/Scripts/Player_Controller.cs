@@ -109,11 +109,11 @@ public class Player_Controller : MonoBehaviour
             isGrounded = true;
         }
 
-        if (collision.gameObject.tag == "Health")
+       /* if (collision.gameObject.tag == "Health")
         {
             Health hitPoints = gameObject.GetComponent<Health>();
             hitPoints.hitPoints += 10;
-        }
+        }*/
 
         if (collision.gameObject.tag == "Enemy")
         {
@@ -121,11 +121,11 @@ public class Player_Controller : MonoBehaviour
             hitPoints.hitPoints -= 10;
         }
 
-        if (collision.gameObject.tag == "Lives")
+        /*if (collision.gameObject.tag == "Lives")
         {
             Health lives = gameObject.GetComponent<Health>();
             lives.lives += 1;
-        }
+        }*/
 
         if (collision.gameObject.tag == "Cloud")
         {

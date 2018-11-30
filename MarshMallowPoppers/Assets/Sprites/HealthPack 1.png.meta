@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: d9c61fe205e961c4888cfc8afb110a1d
+guid: f731b1022fad798428e333f69c7ed664
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ExitDoor_0
+    21300000: HealthPack 1_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -85,33 +85,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ExitDoor_0
+      name: HealthPack 1_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 23
-        width: 130
-        height: 244
+        x: 24
+        y: 32
+        width: 41
+        height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c25f29d57c6a19428a292b7008df4c7
+      spriteID: 6338640056e697547920e88e921ddf9e
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: -90, y: -130}
-      - {x: -90, y: 119}
-      - {x: 49, y: 119}
-      - {x: 49, y: -130}
+    outline: []
     physicsShape: []
     bones: []
-    spriteID: 075d210ac1cdc1a45a98c27ffed9f2b6
+    spriteID: 2dc2f208f69a3e94285d5be54feba5d0
     vertices: []
     indices: 
     edges: []

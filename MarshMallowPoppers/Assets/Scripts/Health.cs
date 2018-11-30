@@ -92,7 +92,16 @@ public class Health : MonoBehaviour
 
     public void IncreaseLives()
     {
+        lives += 1;
+        if (lives > 99)
+        {
+            lives = 99;
+        }
+    }
 
+    public void IncreaseHealth()
+    {
+        hitPoints += 10;
     }
 
     public GameObject Spawn
