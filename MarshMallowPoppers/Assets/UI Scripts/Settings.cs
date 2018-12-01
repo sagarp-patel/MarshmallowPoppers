@@ -33,12 +33,12 @@ public class Settings : MonoBehaviour
         if(togglesound == true)
         {
             SoundFXSource.SetActive(true);
-            SoundFX_Text.GetComponentInChildren<Text>().text = "Sound Effects Enabled";
+            SoundFX_Text.GetComponentInChildren<Text>().text = "Sound FX Enabled";
         }
         else
         {
             SoundFXSource.SetActive(false);
-            SoundFX_Text.GetComponentInChildren<Text>().text = "Sound Effects Disabled";
+            SoundFX_Text.GetComponentInChildren<Text>().text = "Sound FX Disabled";
         }
     }
     public void Slider_Volume()

@@ -10,10 +10,23 @@ public class ButtonManager : MonoBehaviour
     public GameObject OptionsMenuUI;
     public GameObject CreditsScreen;
     public GameObject StoryPanel;
+    public GameObject NextPanel;
 
     public void NewGameButton()
     {
         StoryPanel.SetActive(true);
+    }
+
+    public void NextButton()
+    {
+        StoryPanel.SetActive(false);
+        NextPanel.SetActive(true);
+    }
+
+    public void NextNextButton()
+    {
+        StoryPanel.SetActive(false);
+        NextPanel.SetActive(true);
     }
 
     public void PlayGameButton(string newGameLevel)
@@ -23,7 +36,8 @@ public class ButtonManager : MonoBehaviour
 
     public void GoBackButton()
     {
-        StoryPanel.gameObject.SetActive(false);
+        StoryPanel.gameObject.SetActive(true);
+        NextPanel.SetActive(false);
     }
 
     public void OptionsButton()

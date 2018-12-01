@@ -19365,6 +19365,10 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 0.0000038146973
       objectReference: {fileID: 0}
+    - target: {fileID: 1800773987300000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
+      propertyPath: m_TagString
+      value: ToggleFX
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
   m_IsPrefabAsset: 0
