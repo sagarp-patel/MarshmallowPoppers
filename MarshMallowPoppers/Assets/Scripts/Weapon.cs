@@ -81,5 +81,9 @@ public class Weapon : MonoBehaviour
             Debug.Log("Allow Fire now set to true");
         }
     }
+
+    public void setFire(bool allow) {
+        allowFire = allow;
+    }
 }
 

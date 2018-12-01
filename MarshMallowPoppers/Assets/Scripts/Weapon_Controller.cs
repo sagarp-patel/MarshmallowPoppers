@@ -118,6 +118,8 @@ public class Weapon_Controller : MonoBehaviour {
             if (i == selectedWeapon)
             {
                 weapon.gameObject.SetActive(true);
+                Weapon weapon_script = weapon.gameObject.GetComponentInChildren<Weapon>();
+                weapon_script.setFire(true);
             }
             else
                 weapon.gameObject.SetActive(false);
