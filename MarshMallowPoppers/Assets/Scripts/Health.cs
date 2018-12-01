@@ -107,7 +107,7 @@ public class Health : MonoBehaviour
 
     public void IncreaseHealth()
     {
-        hitPoints += 7;
+        hitPoints += 10;
         if (hitPoints > maxHealth)
         {
             ratio = 1;
