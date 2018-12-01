@@ -1087,6 +1087,11 @@ Prefab:
       propertyPath: DoorAppears
       value: 
       objectReference: {fileID: 1959575274}
+    - target: {fileID: 114960538970861728, guid: 9ae3275a51306ca4cbf58a15aa1d9cd0,
+        type: 2}
+      propertyPath: newGameLevel
+      value: Finish_Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ae3275a51306ca4cbf58a15aa1d9cd0, type: 2}
   m_IsPrefabAsset: 0

@@ -13,7 +13,6 @@ public class KeepObject : MonoBehaviour
     public AudioSource AudioObject1;
     public GameObject EnableTemp;
     public float VolumePreSetting1;
-    public float VolumePreSetting2;
     public bool CheckAudio1;
     public bool CheckAudio2;
     public GameObject SoundFX;
