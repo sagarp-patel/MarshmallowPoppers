@@ -13,6 +13,8 @@ public class ScoreSystem : MonoBehaviour
     public GameObject ExitObject;
     public GameObject ShowMessage;
     public GameObject ShowNavPoint;
+    public AudioSource DoorAppears;
+    private int checknumber;
 
     // Use this for initialization
     void Start()
@@ -24,6 +26,7 @@ public class ScoreSystem : MonoBehaviour
         ShowMessage.SetActive(false);
         ShowNavPoint = GameObject.FindGameObjectWithTag("Navigate");
         ShowNavPoint.SetActive(false);
+        checknumber = 0;
     }
 
     public void UpdateScore()
@@ -57,12 +60,12 @@ public class ScoreSystem : MonoBehaviour
             ExitObject.SetActive(true);
             ShowMessage.SetActive(true);
             ShowNavPoint.SetActive(true);
+            if(checknumber == 0)
+            {
+                DoorAppears.Play();
+                checknumber += 1;
+            }
         }
-    }
-
-    public void DoorSound()
-    {
-
     }
 
     public void FoundGrandCoin()
@@ -72,5 +75,10 @@ public class ScoreSystem : MonoBehaviour
         ExitObject.SetActive(true);
         ShowMessage.SetActive(true);
         ShowNavPoint.SetActive(true);
+        if (checknumber == 0)
+        {
+            DoorAppears.Play();
+            checknumber += 1;
+        }
     }
 }

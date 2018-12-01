@@ -14060,7 +14060,8 @@ Prefab:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114702938545809902, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1101664092
@@ -17471,6 +17472,7 @@ MonoBehaviour:
   ExitObject: {fileID: 956699694}
   ShowMessage: {fileID: 618537978}
   ShowNavPoint: {fileID: 309993906}
+  DoorAppears: {fileID: 1959575274}
 --- !u!1 &1420165151
 GameObject:
   m_ObjectHideFlags: 0
