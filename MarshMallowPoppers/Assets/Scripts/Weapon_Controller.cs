@@ -93,21 +93,18 @@ public class Weapon_Controller : MonoBehaviour {
                 BackPanel1.SetActive(true);
                 BackPanel2.SetActive(false);
                 BackPanel3.SetActive(false);
-                callfunction.ReduceCoin();
             }
             else if (selectedWeapon == 1)
             {
                 BackPanel1.SetActive(false);
                 BackPanel2.SetActive(true);
                 BackPanel3.SetActive(false);
-                callfunction.ReduceCoin();
             }
             else if (selectedWeapon == 2)
             {
                 BackPanel1.SetActive(false);
                 BackPanel2.SetActive(false);
                 BackPanel3.SetActive(true);
-                callfunction.ReduceCoin();
             }
         }
 
