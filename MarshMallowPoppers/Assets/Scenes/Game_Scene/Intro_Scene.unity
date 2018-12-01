@@ -956,7 +956,6 @@ Transform:
   - {fileID: 1288356073}
   - {fileID: 1272645219}
   - {fileID: 726783062}
-  - {fileID: 1337444727}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16824,7 +16823,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoints:
   - {fileID: 726783062}
-  - {fileID: 1337444727}
   LifePack:
   - {fileID: 1004528188}
 --- !u!1 &1275129783
@@ -17441,34 +17439,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d75f7c06dbc0bf845b98df1b7f419fc5, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1337444726
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1337444727}
-  m_Layer: 0
-  m_Name: LifePackSpawnPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1337444727
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1337444726}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.75, y: -3.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 100744885}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1339829369
 Prefab:
   m_ObjectHideFlags: 0
@@ -18296,7 +18266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  count: 50
+  count: 150
   CoinAmount: 0
   displayscore: {fileID: 2021050633}
   displaycoin: {fileID: 884537704}
@@ -19368,6 +19338,71 @@ Prefab:
     - target: {fileID: 1800773987300000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
       propertyPath: m_TagString
       value: ToggleFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305755897412162, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
+      propertyPath: m_TagString
+      value: Timer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114062004256653642, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_Text
+      value: You have collected enough coins. Follow the nav point in order to exit
+        the area.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886376672837044, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129338702390702, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272380982660834, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114340186031029978, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Your Mission:
+
+
+        Collect enough coins to save the wealth of the marshmallow kingdom'
+      objectReference: {fileID: 0}
+    - target: {fileID: 224276582643895558, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 224276582643895558, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 104.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 224276582643895558, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 224276582643895558, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 333.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 114340186031029978, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224177667484034342, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 128.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 224177667484034342, guid: b9280754cac932c4ebddcf8d005cbf88,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -488.14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9280754cac932c4ebddcf8d005cbf88, type: 2}

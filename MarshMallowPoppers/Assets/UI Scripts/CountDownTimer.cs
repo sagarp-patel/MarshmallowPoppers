@@ -35,6 +35,11 @@ public class CountDownTimer : MonoBehaviour
             currentTime = currentTime - 1;
         }
         countdownText.text = currentTime.ToString();
+    }
 
+    public void AddTime()
+    {
+        currentTime += 1;
+        countdownText.text = currentTime.ToString();
     }
 }

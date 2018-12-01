@@ -133,6 +133,12 @@ public class Health : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        GameObject begin = GameObject.Find("Player");
+        ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
+
+        GameObject begin_again = GameObject.FindWithTag("Timer");
+        CountDownTimer callfunction_again = (CountDownTimer)begin_again.GetComponent(typeof(CountDownTimer));
+
         if (collision.gameObject.tag == "Projectile" )
         {
             Projectile otherProjectile = collision.gameObject.GetComponent<Projectile>();
@@ -152,9 +158,8 @@ public class Health : MonoBehaviour
                 //hitPoints -= otherProjectile.Damage;
                 if (hitPoints == 0 || hitPoints <= 0)
                 {
-                    GameObject begin = GameObject.Find("Player");
-                    ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
-                    callfunction.UpdateScore();
+                    callfunction.UpdateScore();   
+                    callfunction_again.AddTime();
                     Explosion.Play();
                 }
             }

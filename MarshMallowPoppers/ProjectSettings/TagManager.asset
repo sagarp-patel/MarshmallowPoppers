@@ -23,6 +23,7 @@ TagManager:
   - Coin
   - SoundFX
   - ToggleFX
+  - Timer
   layers:
   - Default
   - TransparentFX

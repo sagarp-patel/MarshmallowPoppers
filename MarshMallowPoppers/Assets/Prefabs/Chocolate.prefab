@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 16
-  damage: 15
+  damage: 16
   secondsToDestroy: 5
   projectileType: 0
   playerType: 1
