@@ -138,7 +138,18 @@ public class Health : MonoBehaviour
             Projectile otherProjectile = collision.gameObject.GetComponent<Projectile>();
             Debug.Log("I am colliding with another object!");
             if (playerType == PlayerType.ENEMY && otherProjectile.playerType == Projectile.PlayerType.PLAYER) {
-                hitPoints -= otherProjectile.Damage;
+                switch (otherProjectile.projectileType) {
+                    case Projectile.ProjectileType.MARSHMALLOW:
+                        reduceHealth(0, otherProjectile.damage);
+                        break;
+                    case Projectile.ProjectileType.CHOCOLATE:
+                        reduceHealth(1, otherProjectile.damage);
+                        break;
+                    case Projectile.ProjectileType.PEPPERMINT:
+                        reduceHealth(2, otherProjectile.damage);
+                        break;
+                }
+                //hitPoints -= otherProjectile.Damage;
                 if (hitPoints == 0 || hitPoints <= 0)
                 {
                     GameObject begin = GameObject.Find("Player");
@@ -173,6 +184,63 @@ public class Health : MonoBehaviour
             hitPoints = 0;
             StartCoroutine(Death());
             Explosion.Play();
+        }
+    }
+
+    private void reduceHealth(int type, int damage) {
+
+        // type 
+        // -0 = marhsmallow
+        // -1 = Chocolate
+        // -2 = Peppermint
+        // Peppermint > Chocolate
+        // Chocolate > Marshmallow
+        // Marshmallow > Peppermint
+
+        if (healthType == Type.MARSHMALLOW) {
+            switch (type) {
+                case 0: // Marshmallow neutral damage
+                    hitPoints -= damage;
+                    break;
+                case 1: // Chocolate Does more damage
+                    hitPoints -= (damage + (damage * .25f));
+                    break;
+                case 2: // Peppermint does less damage
+                    hitPoints -= (damage - (damage * .75f));
+                    break;
+            }
+        }
+
+        if (healthType == Type.CHOCOLATE)
+        {
+            switch (type)
+            {
+                case 0: // Marsmallow does less damage
+                    hitPoints -= (damage - (damage * .75f));
+                    break;
+                case 1: // Chocolate does neutral damage
+                    hitPoints -= damage;
+                    break;
+                case 2: // Peppermint does more damage
+                    hitPoints -= (damage + (damage * .25f));
+                    break;
+            }
+        }
+
+        if (healthType == Type.PEPPERMINT)
+        {
+            switch (type)
+            {
+                case 0: // Marsmallow does more damage
+                    hitPoints -= (damage + (damage * .25f));
+                    break;
+                case 1: // Chocolate does less damage
+                    hitPoints -= (damage - (damage * .75f));
+                    break;
+                case 2: // Peppermint does neutral damage
+                    hitPoints -= damage;
+                    break;
+            }
         }
     }
 }

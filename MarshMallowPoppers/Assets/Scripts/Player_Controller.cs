@@ -37,6 +37,7 @@ public class Player_Controller : MonoBehaviour
         fire      = KeyCode.Mouse0;
         isGrounded = true;
         weapon = GetComponentInChildren<Weapon>();
+        weapon.setFire(true);
         Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(),gameObject.GetComponent<Collider2D>());
 	}
 	
@@ -136,9 +137,11 @@ public class Player_Controller : MonoBehaviour
         if (collision.gameObject.tag == "Cloud")
         {
             isGrounded = true;
-            yield return new WaitForSeconds(1);
-            Destroy(collision.gameObject);
-            
+            yield return new WaitForSeconds(2);
+            collision.gameObject.SetActive(false);
+            yield return new WaitForSeconds(4);
+            collision.gameObject.SetActive(true);
+
         }
 
     }

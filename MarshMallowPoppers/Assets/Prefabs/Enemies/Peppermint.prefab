@@ -128,13 +128,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb4d101c8bf7324394dda7d1fd790f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
+  hitPoints: 20
   lives: 0
   timeToDie: 0
   spawn: {fileID: 1054053464196110, guid: 522f756dbca4dc4489eee2b538c4bc83, type: 2}
   healthType: 2
   playerType: 0
+  GameOver: {fileID: 0}
+  DisableUI: {fileID: 0}
+  LivesTextObject: {fileID: 0}
+  displayhealth: {fileID: 0}
+  HealthBarImage: {fileID: 0}
+  ratio: 0
   particle: {fileID: 1176794300856084, guid: 9c9bf99f9232c334897933f8ac278264, type: 2}
+  Explosion: {fileID: 0}
+  GameOverSound: {fileID: 0}
+  PlayerDeathSound: {fileID: 0}
 --- !u!114 &114762460261153056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f1beae8e37b5d4088495768a76e425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 3
   stoppingDistance: 1
   retreatDistance: 2
   projectile: {fileID: 1054053464196110, guid: 522f756dbca4dc4489eee2b538c4bc83, type: 2}
