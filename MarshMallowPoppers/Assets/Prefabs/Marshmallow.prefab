@@ -9,45 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1957794772577588}
+  m_RootGameObject: {fileID: 1019139964082648}
   m_IsPrefabAsset: 1
---- !u!1 &1957794772577588
+--- !u!1 &1019139964082648
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4964373590476200}
-  - component: {fileID: 212123885046891126}
-  - component: {fileID: 58848753218614128}
-  - component: {fileID: 114984913988222358}
+  - component: {fileID: 4673094812557114}
+  - component: {fileID: 212145920278731616}
+  - component: {fileID: 114095033649594008}
+  - component: {fileID: 58053564120374404}
   m_Layer: 0
-  m_Name: Peppermint
+  m_Name: Marshmallow
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4964373590476200
+--- !u!4 &4673094812557114
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1957794772577588}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.503, y: 0.037, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_GameObject: {fileID: 1019139964082648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.37, y: 9.61, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58848753218614128
+--- !u!58 &58053564120374404
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1957794772577588}
+  m_GameObject: {fileID: 1019139964082648}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -56,30 +56,30 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
---- !u!114 &114984913988222358
+  m_Radius: 0.5
+--- !u!114 &114095033649594008
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1957794772577588}
+  m_GameObject: {fileID: 1019139964082648}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86ca894a3777e854cb29f77ee20b3c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 14
-  damage: 5
+  speed: 10
+  damage: 10
   secondsToDestroy: 5
-  projectileType: 1
+  projectileType: 2
   playerType: 1
   animator: {fileID: 0}
---- !u!212 &212123885046891126
+--- !u!212 &212145920278731616
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1957794772577588}
+  m_GameObject: {fileID: 1019139964082648}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -109,12 +109,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: b61fd7bd0957c4349b481cd941872aee, type: 3}
+  m_Sprite: {fileID: 21300010, guid: b61fd7bd0957c4349b481cd941872aee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.4, y: 0.4}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

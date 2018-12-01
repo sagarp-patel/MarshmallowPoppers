@@ -18301,7 +18301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
-  lives: 1
+  lives: 3
   timeToDie: 0
   spawn: {fileID: 731602984}
   healthType: 1
@@ -18907,7 +18907,7 @@ MonoBehaviour:
   projectile: {fileID: 114837358952910622, guid: 6feabeb7d7cbebb43948c065f6db41e1,
     type: 2}
   playerType: 1
-  rateOfFire: 100
+  rateOfFire: 200
   Projectile_Fire: {fileID: 767962657}
 --- !u!1 &1440716060
 GameObject:
@@ -21246,7 +21246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ee786fa1ef6af49ac99d7f2c2bb6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 114945570305697038, guid: 522f756dbca4dc4489eee2b538c4bc83,
+  projectile: {fileID: 114095033649594008, guid: 0cbcc7ddeb43083489a70593ad75cd87,
     type: 2}
   playerType: 1
   rateOfFire: 300
