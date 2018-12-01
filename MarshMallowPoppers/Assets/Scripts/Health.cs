@@ -134,7 +134,11 @@ public class Health : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject begin = GameObject.Find("Player");
-        ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
+
+        //deleted and replaced because Unity gave error
+        //ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
+
+        var callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
 
         GameObject begin_again = GameObject.FindWithTag("Timer");
         CountDownTimer callfunction_again = (CountDownTimer)begin_again.GetComponent(typeof(CountDownTimer));
