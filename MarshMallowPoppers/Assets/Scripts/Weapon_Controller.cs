@@ -12,6 +12,7 @@ public class Weapon_Controller : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
         selectedWeapon = 0;
         BackPanel1.SetActive(true);
         BackPanel2.SetActive(false);
@@ -22,9 +23,12 @@ public class Weapon_Controller : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        GameObject begin = GameObject.Find("Player");
+        ScoreSystem callfunction = (ScoreSystem)begin.GetComponent(typeof(ScoreSystem));
         int previousSelectedWeapon = selectedWeapon;
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
+            callfunction.ReduceCoin();
             if (selectedWeapon >= transform.childCount - 1)
                 selectedWeapon = 0;
             else
@@ -51,6 +55,8 @@ public class Weapon_Controller : MonoBehaviour {
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
+            callfunction.ReduceCoin();
+
             if (selectedWeapon < 0)
                 selectedWeapon = transform.childCount - 1;
             else
@@ -77,6 +83,7 @@ public class Weapon_Controller : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            callfunction.ReduceCoin();
             if (selectedWeapon >= transform.childCount - 1)
                 selectedWeapon = 0;
             else
@@ -86,18 +93,21 @@ public class Weapon_Controller : MonoBehaviour {
                 BackPanel1.SetActive(true);
                 BackPanel2.SetActive(false);
                 BackPanel3.SetActive(false);
+                callfunction.ReduceCoin();
             }
             else if (selectedWeapon == 1)
             {
                 BackPanel1.SetActive(false);
                 BackPanel2.SetActive(true);
                 BackPanel3.SetActive(false);
+                callfunction.ReduceCoin();
             }
             else if (selectedWeapon == 2)
             {
                 BackPanel1.SetActive(false);
                 BackPanel2.SetActive(false);
                 BackPanel3.SetActive(true);
+                callfunction.ReduceCoin();
             }
         }
 

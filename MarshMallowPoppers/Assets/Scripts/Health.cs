@@ -65,7 +65,7 @@ public class Health : MonoBehaviour
             lives--;
             LivesTextObject.text = lives.ToString();
             PlayerDeathSound.Play();
-            if (lives <= 0)
+            if (lives < 0)
             {
                 GameOver.SetActive(true);
                 DisableUI.SetActive(false);
@@ -107,7 +107,7 @@ public class Health : MonoBehaviour
 
     public void IncreaseHealth()
     {
-        hitPoints += 10;
+        hitPoints += 7;
         if (hitPoints > maxHealth)
         {
             ratio = 1;

@@ -81,4 +81,14 @@ public class ScoreSystem : MonoBehaviour
             checknumber += 1;
         }
     }
+
+    public void ReduceCoin()
+    {
+        CoinAmount -=5;
+        if (CoinAmount < 0)
+        {
+            CoinAmount = 0;
+        }
+        displaycoin.text = CoinAmount.ToString();
+    }
 }
