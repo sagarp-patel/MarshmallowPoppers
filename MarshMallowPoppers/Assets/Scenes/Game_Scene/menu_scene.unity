@@ -462,7 +462,7 @@ Prefab:
     - target: {fileID: 224408016642528102, guid: 98803a4a36d803542b5a2116f82c3c91,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -94.4
+      value: -94.399994
       objectReference: {fileID: 0}
     - target: {fileID: 4055011940226528, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
       propertyPath: m_LocalPosition.x
@@ -481,6 +481,12 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 274.95
       objectReference: {fileID: 0}
+    - target: {fileID: 328713306278480678, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: ba1dd681dca9f79419a02cd01c7e3e8b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
   m_IsPrefabAsset: 0
