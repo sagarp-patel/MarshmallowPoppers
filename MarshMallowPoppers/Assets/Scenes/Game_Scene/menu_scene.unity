@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667564, g: 0.48427147, b: 0.56452364, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -435,6 +435,51 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284070411780724, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376310899029746, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224513720113400966, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.4699707
+      objectReference: {fileID: 0}
+    - target: {fileID: 114253622104115250, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_Text
+      value: "KeyBoard Controls:\t\t\t\t\t\t\t\tItems:\t\t\t\tMedPacks\t\tLife Hearts\t\t\tCoins\n\n\tSpace
+        Bar - Jump\t\t\t\t\t\tProjectiles:\n\n\tE - Switch Projectile Type\t\t\t\t\t\t\tMarshmallow\t\tChocolate\t\t\tPeppermint\n\n\tA
+        Key - Move Left\t\t\tD Key - Move Right\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUI
+        Elements:\n\t\t\t\t\nMouse:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLives\n\n\tMouse
+        Wheel - Switch Projectiles\t\t\t\t\t\t\t\t\t\tCandy Eliminations\n\n\tLeft
+        Mouse Button - Fire (Use Cursor to Aim)\t\t\t\t\tHealthbar"
+      objectReference: {fileID: 0}
+    - target: {fileID: 224408016642528102, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -94.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4055011940226528, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 316
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154772572442498, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 189.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154772572442498, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 224408016642528102, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 274.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
