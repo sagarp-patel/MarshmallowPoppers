@@ -368,7 +368,7 @@ Prefab:
     - target: {fileID: 224408016642528102, guid: 98803a4a36d803542b5a2116f82c3c91,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -105.000015
+      value: -105.00003
       objectReference: {fileID: 0}
     - target: {fileID: 1875611805578770, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
       propertyPath: m_IsActive
@@ -387,7 +387,7 @@ Prefab:
       propertyPath: m_Text
       value: "KeyBoard Controls:\t\t\t\t\t\t\t\tItems:\t\tMedPacks\t\tLife Hearts\t\tCoins\n\n\tSpace
         Bar - Jump\t\t\t\t\t\tProjectiles:\n\n\tE - Switch Projectile Type\t\t\t\t\tMarshmallow\t\tChocolate\t\t\tPeppermint\n\n\tA
-        Key - Move Left\t\t\tD Key - Move Right\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUI
+        Key - Move Left\t\t\tD Key - Move Right\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUI
         Elements:\n\t\t\t\t\nMouse:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLives\n\n\tMouse
         Wheel - Switch Projectiles\t\t\t\t\t\t\t\t\t\t\tCandy Eliminations\n\n\tLeft
         Mouse Button - Fire (Use Cursor to Aim)\t\t\t\t\t\tHealthbar"
