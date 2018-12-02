@@ -389,7 +389,7 @@ Prefab:
         Bar - Jump\t\t\t\t\t\tProjectiles:\n\n\tE - Switch Projectile Type\t\t\t\t\tMarshmallow\t\tChocolate\t\t\tPeppermint\n\n\tA
         Key - Move Left\t\t\tD Key - Move Right\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUI
         Elements:\n\t\t\t\t\nMouse:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLives\n\n\tMouse
-        Wheel - Switch Projectiles\t\t\t\t\t\t\t\t\t\t\tCandy Eliminations\n\n\tLeft
+        Wheel - Switch Projectiles\t\t\t\t\t\t\t\t\t\tCandy Eliminations\n\n\tLeft
         Mouse Button - Fire (Use Cursor to Aim)\t\t\t\t\t\tHealthbar"
       objectReference: {fileID: 0}
     - target: {fileID: 224051500720859668, guid: 98803a4a36d803542b5a2116f82c3c91,
@@ -406,6 +406,25 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.x
       value: 780.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284070411780724, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114788296579347966, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114465858421186148, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114465858421186148, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
