@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
         {
             ratio = 1;
             LivesTextObject.text = lives.ToString();
+            displayhealth.text = "Health: " + maxHealth.ToString();
             HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1, 1);
         }
     }
@@ -64,7 +65,8 @@ public class Health : MonoBehaviour
             Spawn respawn = spawn.GetComponent<Spawn>();
             lives--;
             LivesTextObject.text = lives.ToString();
-            PlayerDeathSound.Play();
+            displayhealth.text = "Health: " + maxHealth.ToString();
+            HealthBarImage.rectTransform.localScale = new Vector3(ratio, 1, 1);
             if (lives < 0)
             {
                 GameOver.SetActive(true);
@@ -173,9 +175,10 @@ public class Health : MonoBehaviour
             Destroy(otherProjectile.gameObject);
         }
 
-        if (playerType == PlayerType.PLAYER)
+        if (playerType == PlayerType.PLAYER && collision.gameObject.tag == "Enemy")
         {
-            if(HitPoints > maxHealth)
+            PlayerDeathSound.Play();
+            if (HitPoints > maxHealth)
             {
                 ratio = 1;
                 displayhealth.text = "Health: " + hitPoints.ToString();
