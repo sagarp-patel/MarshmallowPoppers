@@ -1442,7 +1442,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207671645417566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 367.47028, y: -62.1607, z: -44582.777}
+  m_LocalPosition: {x: 352, y: -52, z: -44582.777}
   m_LocalScale: {x: 18.013243, y: 18.013243, z: 45.033108}
   m_Children: []
   m_Father: {fileID: 224510703482642020}
@@ -1481,7 +1481,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1034848020832118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 237.77493, y: -18.47859, z: -44582.777}
+  m_LocalPosition: {x: 221, y: -12, z: -44582.777}
   m_LocalScale: {x: 45.033108, y: 45.033108, z: 45.033108}
   m_Children: []
   m_Father: {fileID: 224510703482642020}
@@ -1602,7 +1602,7 @@ Transform:
   m_LocalScale: {x: 3.8971143, y: 3.8971143, z: 3.8971143}
   m_Children: []
   m_Father: {fileID: 224306621823796628}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4677082678702742
 Transform:
@@ -2421,10 +2421,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 19
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2434,10 +2434,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "KeyBoard Controls:\t\t\t\t\t\t\t\tItems:\t\tMedPacks\t\tLife Hearts\t\tCoins\n\n\tSpace
     Bar - Jump\t\t\t\t\t\tProjectiles:\n\n\tE - Switch Projectile Type\t\t\t\t\tMarshmallow\t\tChocolate\t\t\tPeppermint\n\n\tA
-    Key - Move Left\t\t\tD Key - Move Right\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUI
-    Elements:\n\t\t\t\t\nMouse:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLives\n\n\tMouse
+    Key - Move Left\t\t\tD Key - Move Right\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUI
+    Elements:\n\t\t\t\t\nMouse:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLives\n\n\tMouse
     Wheel - Switch Projectiles\t\t\t\t\t\t\t\t\t\tCandy Eliminations\n\n\tLeft Mouse
-    Button - Fire (Use Cursor to Aim)\t\t\t\t\t\tHealthbar"
+    Button - Fire (Use Cursor to Aim)\t\t\t\t\tHealthbar"
 --- !u!114 &114272490950757824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5817,7 +5817,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -364214393
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &224020168132613572
@@ -5891,8 +5891,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.4, y: -0.93251}
-  m_SizeDelta: {x: 780.1, y: 429.4}
+  m_AnchoredPosition: {x: -0.2, y: 0.8}
+  m_SizeDelta: {x: 785.3, y: 432.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224060162025868530
 RectTransform:
@@ -6163,14 +6163,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 224888581294677440}
   - {fileID: 4666334470666404}
+  - {fileID: 224888581294677440}
   - {fileID: 224301878143327404}
   - {fileID: 224566722455204688}
   - {fileID: 224429700547382968}
   - {fileID: 224797227080153340}
-  - {fileID: 224903274069909116}
   - {fileID: 224510703482642020}
+  - {fileID: 224903274069909116}
   - {fileID: 224798809776045584}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -6250,7 +6250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 326.85, y: -105.00003}
+  m_AnchoredPosition: {x: 300.9, y: -95.000015}
   m_SizeDelta: {x: -691.9, y: -431.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224415014572078606
@@ -6436,7 +6436,7 @@ RectTransform:
   - {fileID: 224661412315990560}
   - {fileID: 224752082530058074}
   m_Father: {fileID: 224306621823796628}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6952,7 +6952,7 @@ RectTransform:
   m_Children:
   - {fileID: 4653087421543694}
   m_Father: {fileID: 224306621823796628}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6974,7 +6974,7 @@ RectTransform:
   - {fileID: 224661312121463514}
   - {fileID: 4550206597478372}
   m_Father: {fileID: 224306621823796628}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7048,7 +7048,7 @@ VideoPlayer:
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 29ba785be5d4baf45ab5b14b3301a128, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -7066,5 +7066,5 @@ VideoPlayer:
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
