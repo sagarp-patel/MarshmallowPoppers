@@ -487,6 +487,21 @@ Prefab:
       value: 
       objectReference: {fileID: 32900000, guid: ba1dd681dca9f79419a02cd01c7e3e8b,
         type: 3}
+    - target: {fileID: 1469934207086566, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114190652511387216, guid: 98803a4a36d803542b5a2116f82c3c91,
+        type: 2}
+      propertyPath: m_Text
+      value: "Welcome to MarshMallow Poppers\n\n\tThe game is set in 3018, where Marshmallow
+        Land is known as a treasure paradise. Marshmallow Land\u2019s wealth was talk
+        of the surrounding communities and one day, an army of evil candy came to
+        know about it and they attacked Marshmallow Land. In order to prevent their
+        wealth from being stolen they chose to fight back.\n\n\n\tYou, the player,
+        shall take on the role of one of these cute yet brave marshmallow fighters
+        to help bring back the stolen coins all while fending off enemy candy combatants.\n\n"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98803a4a36d803542b5a2116f82c3c91, type: 2}
   m_IsPrefabAsset: 0

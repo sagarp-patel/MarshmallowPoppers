@@ -13,7 +13,7 @@ public class MedPackSpawn : MonoBehaviour
     void Start()
     {
         spawnAllowed = true;
-        InvokeRepeating("SpawnAMonster", 0f, 3f);
+        InvokeRepeating("SpawnAMonster", 0f, 5f);
     }
     void SpawnAMonster()
     {
