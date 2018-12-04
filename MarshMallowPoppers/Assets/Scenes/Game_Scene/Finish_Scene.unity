@@ -1553,7 +1553,7 @@ Prefab:
         You made it back safely from the marshamllow front and have retrieved some
         of the stolen wealth. Every little bit of effort counts towards defeating
         the evil candy army. Afterall, Marshmallow Land needs to fund its war effort
-        and these coin-retrieval runs greatly helps the kingdom.'
+        and these coin-retrieval operations greatly helps the kingdom.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68867bd1b1c97b45b33cad2b9066b0e, type: 2}
