@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4673094812557114}
   - component: {fileID: 212145920278731616}
   - component: {fileID: 114095033649594008}
+  - component: {fileID: 114100317363748156}
   - component: {fileID: 58053564120374404}
   m_Layer: 0
   m_Name: Marshmallow
@@ -74,6 +75,18 @@ MonoBehaviour:
   projectileType: 2
   playerType: 1
   animator: {fileID: 0}
+--- !u!114 &114100317363748156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019139964082648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc15e9a0764ab7e47b234f31501d80de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 212145920278731616}
 --- !u!212 &212145920278731616
 SpriteRenderer:
   m_ObjectHideFlags: 1

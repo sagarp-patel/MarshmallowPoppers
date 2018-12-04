@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212123885046891126}
   - component: {fileID: 58848753218614128}
   - component: {fileID: 114984913988222358}
+  - component: {fileID: 114027842497858722}
   m_Layer: 0
   m_Name: Peppermint
   m_TagString: Projectile
@@ -57,6 +58,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &114027842497858722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957794772577588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc15e9a0764ab7e47b234f31501d80de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 212123885046891126}
 --- !u!114 &114984913988222358
 MonoBehaviour:
   m_ObjectHideFlags: 1
