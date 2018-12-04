@@ -24,6 +24,7 @@ public class ChangeColor : MonoBehaviour
         state = 1;
         value1 = 1.0f;
         othervalue1 = 1.0f;
+        othervalue2 = 1.0f;
         otherstate = 2;
     }
 
